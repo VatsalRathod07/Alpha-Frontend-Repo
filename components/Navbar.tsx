@@ -16,37 +16,37 @@
     };
 
     return (
-      <nav className={`nav container p-3 absolute top-0 z-10 ${isSidebarOpen ? 'sm:bg-white' : 'sm:bg-transparent'}`}>
+    <nav className={`nav container p-3 bg-white text-secondary ${isSidebarOpen ? 'sm:bg-pale' : 'sm:bg-white'}`}>
         <div className="navbar_content w-full flex justify-between p-1 items-center">
-          <h2 className="navbar_logo text-3xl font-medium text-black font-signature tracking-[.5px]">
+          <h2 className="navbar_logo text-3xl font-medium text-secondary font-signature tracking-[.5px]">
             Alpha
           </h2>
           <div className="flex justify-between gap-5 list-none sm:hidden">
             <button
-              className="text-white font-extrabold"
+              className="text-secondary font-extrabold"
               onClick={toggleSidebar}
             >
-              <HiMenu size={20} className="text-black"/>
+              <HiMenu size={20} className="text-secondary"/>
             </button>
           </div>
-          <ul className={`hidden sm:flex sm:gap-5 sm:list-none ${isSidebarOpen ? 'bg-white bg-opacity-60' : 'bg-transparent'}`}>
+          <ul className={`hidden sm:flex sm:gap-5 sm:list-none ${isSidebarOpen ? 'bg-pale bg-opacity-60' : 'bg-white'}`}>
             <li>
-              <Link href="/" className="text-base font-normal text-black">
+              <Link href="/" className="text-base font-normal text-secondary">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/products" className="text-base font-normal text-black">
+              <Link href="/products" className="text-base font-normal text-secondary">
                 Products
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-base font-normal text-black">
+              <Link href="/about" className="text-base font-normal text-secondary">
                 About
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-base font-normal text-black">
+              <Link href="/" className="text-base font-normal text-secondary">
                 Contact
               </Link>
             </li>
@@ -55,7 +55,7 @@
         <ul
           className={`${
             isSidebarOpen ? 'block' : 'hidden'
-          } sm:hidden sm:flex sm:gap-5 sm:list-none bg-white bg-opacity-60 p-4 absolute top-0 right-0 h-[250px] w-screen backdrop-blur-lg`}
+          } sm:hidden sm:flex sm:gap-5 sm:list-none bg-pale bg-opacity-60 p-4 absolute top-0 right-0 h-[250px] w-screen backdrop-blur-lg`}
         >
           <li className="flex justify-end">
             <button

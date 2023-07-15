@@ -3,18 +3,13 @@ import React from 'react';
 const About = () => {
   return (
     <section className="about container" id="about">
-      <div className="about_contnet flex justify-between items-center pt-[60px] pb-[60px] pl-[40px] pr-[40px] gap-5">
+      <div className="about_contnet flex flex-col sm:flex-row justify-between items-center pt-[60px] pb-[60px] pl-[20px] pr-[20px] gap-5">
         <div className="about_details flex flex-col gap-5">
-          <h3 className="about-header text-2xl text-[#353535] font-bold">About Us</h3>
-          <p className="about-description max-w-[550px] font-signature text-justify text-base font-normal">For us, the worlds of work and home are delicately intertwined -
-            balanced in equilibrium with a good few years of practice under
-            our belts. A truly personal dance we do and ongoing labour of
-            love, we wanted the film to capture an insight into our creative
-            vision and the ever-so-slight madness to our method.</p>
+          <p className="about-description max-w-[550px] font-signature text-justify text-base font-normal">Facilisis eu faucibus diam cursus pulvinar consectetur purus sem felis, mauris consectetur nisl vitae gravida ultricies sem condimentum aliquet ut sed gravida amet vitae euismod pulvinar volutpat laoreet pharetra.</p>
         </div>
 
         <div>
-          <img src="https://www.home-designing.com/wp-content/uploads/2018/06/minimalist-home-office-setup.jpg" alt="about_img" className="about-image w-[605px] h-72 object-cover"/>
+          <img src="https://images.squarespace-cdn.com/content/v1/5a206c4bdc2b4affa2b76f82/1598482922991-L3KWD5D725XJ8ZTHJ6BX/howtoarrangeindoorplants1.jpg" alt="about_img" className="about-image w-[605px] h-72 object-cover"/>
         </div>
       </div>
   </section>

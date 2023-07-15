@@ -12,7 +12,7 @@ const Page = () => {
     <Product/>
     <About/>
     <NewsLetter/>
-    <FollowUs/>
+    {/* <FollowUs/> */}
     </>
   );
 };

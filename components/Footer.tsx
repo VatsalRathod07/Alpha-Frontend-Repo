@@ -1,40 +1,42 @@
+import Link from 'next/link';
 import React from 'react';
 import { BsFacebook, BsPinterest, BsInstagram } from 'react-icons/bs'
 
 const Footer = () => {
-  return (
-    <footer className="footer container flex flex-col gap-5 bg-[#f5f5f5] p-5 mt-10" id="contact">
-        <div className="footer_content flex justify-between items-center">
-            {/* <div className="footer_grid grid grid-cols-3 justify-center gap-5">
-                <div className="footer_contact text-center border-b-[1px] border-[#e0e0e0] p-[10px] flex flex-col gap-[5px]">
-                    <p className="footer_icon font-semibold text-[#353535]">Email</p>
-                    <p>alpha@gmail.com</p>
+    return (
+        <footer className="footer container flex flex-col gap-5 bg-secondary p-10">
+            <div className="footer_content flex justify-center gap-10 items-center text-white">
+                <Link href="/">Home</Link>
+                <Link href="/">Products</Link>
+                <Link href="/">About</Link>
+                <Link href="/">Contact</Link>
+            </div>
+
+            <div className="home_content flex flex-col gap-2 p-5 text-center">
+                <div className="flex flex-col gap-2">
+                    <h3 className="text-xl font-normal text-white font-signature">Subscribe to our newsletter</h3>
                 </div>
-
-                <div className="footer_contact text-center border-b-[1px] border-[#e0e0e0] p-[10px] flex flex-col gap-[5px]">
-                    <p className="footer_icon font-semibold text-[#353535]">Call</p>
-                    <p>+1 123-456-7890</p>
+                <div className="flex flex-col sm:flex-row justify-center gap-5">
+                    <input
+                        type="email"
+                        placeholder="Enter your email address"
+                        className="focus:outline-none p-[5px] border-[1px] border-primary  w-full sm:w-[300px] bg-white"
+                    />
+                    <button className="bg-green text-white px-5 py-1">Sign up</button>
                 </div>
+            </div>
 
-                <div className="footer_contact text-center border-b-[1px] border-[#e0e0e0] p-[10px] flex flex-col gap-[5px]">
-                    <p className="footer_icon font-semibold text-[#353535]">Location</p>
-                    <p>132, My Street, Kingston, New York 12401</p>
-                </div>
-            </div> */}
-        <div>
-            <p className="footer_copyright text-base text-[#353535] font-bold font-signature">© 2023 Alpha Frontend</p>
-        </div>
-        
-        <div className="footer_social flex justify-center gap-[30px]">
-            <div className="footer_icon font-semibold text-[#353535]"><BsInstagram size={20}/></div>
-            <div className="footer_icon font-semibold text-[#353535]"><BsPinterest size={20}/></div>
-            <div className="footer_icon font-semibold text-[#353535]"><BsFacebook size={20}/></div>
-        </div>
+            <div className="flex gap-5 text-primary justify-center">
+                <BsInstagram size={20} className="text-primary hover:text-white cursor-pointer" />
+                <BsPinterest size={20} className="text-primary hover:text-white cursor-pointer" />
+                <BsFacebook size={20} className="text-primary hover:text-white cursor-pointer" />
+            </div>
 
-        </div>
+            <span className="border-pale border-t-[.1px] opacity-25"></span>
 
-    </footer>
-  )
+            <p className="text-center text-white opacity-60 text-base">©2023 Alpha Shop. All Rights Reserved</p>
+        </footer>
+    )
 }
 
 export default Footer

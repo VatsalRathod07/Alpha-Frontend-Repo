@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
+import { AiOutlineStar } from 'react-icons/ai'
+
 
 const products = [
   {
@@ -7,7 +9,7 @@ const products = [
     name: 'Gambia',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.',
     price: '$120.00',
-    image: 'https://i.pinimg.com/564x/ef/45/38/ef45387351176cfb696d4aa990fad126.jpg',
+    image: 'https://websitedemos.net/plant-shop-02/wp-content/uploads/sites/931/2021/08/plants-ecommerce-product-featured-img-8.jpg',
     contact: '+91 123-456-7890'
   },
   {
@@ -15,7 +17,7 @@ const products = [
     name: 'Ascension Island',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.',
     price: '$120.00',
-    image: 'https://i.pinimg.com/564x/90/08/96/9008966be390880944a9a0d7089a56b3.jpg',
+    image: 'https://websitedemos.net/plant-shop-02/wp-content/uploads/sites/931/2021/08/plants-ecommerce-product-featured-img-5.jpg',
     contact: '+91 123-456-7890'
   },
   {
@@ -23,7 +25,7 @@ const products = [
     name: 'Somalia',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.',
     price: '$120.00',
-    image: 'https://i.pinimg.com/564x/da/20/1c/da201cd219e81dc874640e8e783c568e.jpg',
+    image: 'https://websitedemos.net/plant-shop-02/wp-content/uploads/sites/931/2021/08/plants-ecommerce-product-featured-img-14.jpg',
     contact: '+91 123-456-7890'
   },
   {
@@ -31,7 +33,7 @@ const products = [
     name: 'United Arab Emirates',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.',
     price: '$120.00',
-    image: 'https://i.pinimg.com/564x/0b/06/bf/0b06bf3acf7c6a0ae6262fa2dee68345.jpg',
+    image: 'https://websitedemos.net/plant-shop-02/wp-content/uploads/sites/931/2021/08/plants-ecommerce-product-featured-img-16.jpg',
     contact: '+91 123-456-7890'
   },
   {
@@ -39,7 +41,7 @@ const products = [
     name: 'Tanzania',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.',
     price: '$120.00',
-    image: 'https://i.pinimg.com/736x/fb/6b/38/fb6b38010f79100e0fb712ad4b9e562d.jpg',
+    image: 'https://websitedemos.net/plant-shop-02/wp-content/uploads/sites/931/2021/08/plants-ecommerce-product-featured-img-4.jpg',
     contact: '+91 123-456-7890'
   },
   {
@@ -47,7 +49,7 @@ const products = [
     name: 'Myanmar (Burma)',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.',
     price: '$120.00',
-    image: 'https://i.pinimg.com/564x/e7/3e/4a/e73e4a8f0bff527be64a50d7883916ce.jpg',
+    image: 'https://websitedemos.net/plant-shop-02/wp-content/uploads/sites/931/2021/08/plants-ecommerce-product-featured-img-19.jpg',
     contact: '+91 123-456-7890'
   },
   {
@@ -55,7 +57,7 @@ const products = [
     name: 'Antarctica',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.',
     price: '$120.00',
-    image: 'https://i.pinimg.com/564x/d4/24/76/d42476769ec6570fb4f2b07064019d5d.jpg',
+    image: 'https://websitedemos.net/plant-shop-02/wp-content/uploads/sites/931/2021/08/plants-ecommerce-product-featured-img-7.jpg',
     contact: '+91 123-456-7890'
   },
   {
@@ -63,7 +65,7 @@ const products = [
     name: 'British Virgin Islands',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.',
     price: '$120.00',
-    image: 'https://i.pinimg.com/564x/53/52/6d/53526dc14dd5f2850292cfe509a1e880.jpg',
+    image: 'https://websitedemos.net/plant-shop-02/wp-content/uploads/sites/931/2021/08/plants-ecommerce-product-featured-img-18.jpg',
     contact: '+91 123-456-7890'
   },
 ];
@@ -72,18 +74,25 @@ const products = [
 const ProductDetails = ({ }) => {
   return (
     <section className="products container py-16">
-      <div className="products_content flex flex-col gap-[30px] p-10">
+      <div className="products_content flex flex-col gap-[30px] py-10 px-5">
         <h4 className="product-header text-center font-semibold text-2xl">Our Latest Product</h4>
 
-        <div className="products-grid flex flex-wrap justify-center gap-5">
+        <div className="products-grid grid justify-items-center grid-cols-2 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 sm gap-5 justify-center">
           {products.map((product) => (
             <Link href={`/products/${product.name}`} key={product.name} className="product-link">
               <div className="product-card cursor-pointer">
-                <img src={product.image} alt={product.name} className="product-img w-[250px] h-[300px] object-cover" />
-
-                <div className="product-details p-2 flex flex-col gap-[5px]">
-                  <p className="product-name font-signature font font-semibold text-lg">{product.name}</p>
-                  <p className="product-price text-sm font-medium">{product.price}</p>
+                <div>
+                  <img src={product.image} alt={product.name} className="product-img w-full object-cover" />
+                </div>
+                <div className="product-details py-1 flex flex-col gap-[2px]">
+                  <div className="flex gap-[1px] text-primary text-sm">
+                    <AiOutlineStar/>
+                    <AiOutlineStar/>
+                    <AiOutlineStar/>
+                    <AiOutlineStar/>
+                  </div>
+                  <p className="product-name font-signature text-secondary font-normal text-base">{product.name}</p>
+                  <p className="product-price text-sm text-primary font-bold">{product.price}</p>
                 </div>
               </div>
             </Link>

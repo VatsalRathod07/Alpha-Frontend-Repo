@@ -11,7 +11,7 @@ const Home = () => {
             // src="https://images.augustman.com/wp-content/uploads/sites/2/2022/07/12121021/untitled-design-2022-07-06t112123-753.jpeg"
             src="https://websitedemos.net/plant-shop-02/wp-content/uploads/sites/931/2021/09/hero-section-bg.jpg"
             alt="background_img"
-            className="home_background w-full h-[620px] object-cover bg-no-repeat"
+            className="home_background w-full h-screen sm:h-screen object-cover bg-no-repeat"
           />
           <div className="home_overlay absolute inset-0 bg-gradient-to-b from-secondary opacity-40 to-black"></div>
           <div className="home_text absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center flex flex-col gap-5 items-center">

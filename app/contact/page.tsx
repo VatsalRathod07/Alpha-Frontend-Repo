@@ -32,9 +32,7 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <div className="visible sm:hidden border-primary border-t-[.3px] opacity-30"></div>
-
-                    <div className="flex flex-col gap-2 items-center sm:items-start mb-3">
+                    <div className="flex flex-col gap-2 items-center sm:items-start">
                         <p className="font-signature font-bold text-primary text-center sm:text-start">FOLLOW US</p>
                         <div className="flex gap-5 text-primary">
                             <BsInstagram size={25} className="text-primary hover:text-secondary cursor-pointer"/>
@@ -43,7 +41,6 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <div className="visible sm:hidden border-primary border-b-[.3px] opacity-30"></div>
                 </div>
                 
                 <div>

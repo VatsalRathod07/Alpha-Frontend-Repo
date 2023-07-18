@@ -98,21 +98,24 @@ const ProductDetails = () => {
                                 <img src="https://d3gkbidvk2xej.cloudfront.net/images/products/2fe4a5f7-6dcd-453b-b0b8-81e18ef421d3/s/cast-iron-plant-coral-mid-century-ceramic-black-wood-stand.jpeg?version=1608582508.57490019800" alt="" className="" />
                             </div>
 
-                            <div className="flex flex-col md:flex-row gap-4 sm:gap-0 p-0 sm:p-1">
+                            <div className="flex flex-col md:flex-row gap-4 sm:gap-0">
                                 <p className="text-3xl text-secondary font-signature sm:w-[50%]">Product Highlight</p>
 
                                 <div className="flex flex-col gap-5">
-                                    <li className="text-primary text-sm pb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
-                                    <li className="text-primary text-sm pb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
-                                    <li className="text-primary text-sm pb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
-                                    <li className="text-primary text-sm pb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+                                    <li className="text-primary text-sm pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod magnam vitae, placeat voluptatibus dolorum ducimus mollitia porro adipisci esse ipsa!</li>
+                                    <li className="text-primary text-sm pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod magnam vitae, placeat voluptatibus dolorum ducimus mollitia porro adipisci esse ipsa!</li>
+                                    <li className="text-primary text-sm pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod magnam vitae, placeat voluptatibus dolorum ducimus mollitia porro adipisci esse ipsa!</li>
+                                    <li className="text-primary text-sm pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod magnam vitae, placeat voluptatibus dolorum ducimus mollitia porro adipisci esse ipsa!</li>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="mt-20">
+                <div className="border-pale  border-t-[.1px] opacity-25 mt-5"></div>
+
+
+                <div className="mt-12">
                     <p className="text-base sm:text-xl text-primary font-semibold mb-5 capitalize recommended_products">You might be interested in these products</p>
 
                     <div className="products-grid grid justify-items-center grid-cols-2 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 sm gap-5 justify-center">

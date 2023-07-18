@@ -99,7 +99,7 @@ const ProductDetails = () => {
                             </div>
 
                             <div className="flex flex-col md:flex-row gap-4 sm:gap-0 p-0 sm:p-1">
-                                <p className="text-3xl text-secondary font-signature w-[50%]">Product Highlight</p>
+                                <p className="text-3xl text-secondary font-signature sm:w-[50%]">Product Highlight</p>
 
                                 <div className="flex flex-col gap-5">
                                     <li className="text-primary text-sm pb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>

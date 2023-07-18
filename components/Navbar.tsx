@@ -16,7 +16,7 @@
     };
 
     return (
-    <nav className={`nav container absolute top-0 z-10 p-3 bg-white text-secondary ${isSidebarOpen ? 'sm:bg-white' : 'sm:bg-white'}`}>
+    <nav className={`nav  p-3 bg-white text-secondary ${isSidebarOpen ? 'sm:bg-white' : 'sm:bg-white'}`}>
         <div className="navbar_content w-full flex justify-between p-1 items-center">
           <Link href="/" className="navbar_logo text-3xl font-medium text-secondary font-signature tracking-[.5px]">
             Alpha
@@ -32,7 +32,7 @@
           <ul className={`hidden sm:flex sm:gap-5 sm:list-none ${isSidebarOpen ? 'bg-white bg-opacity-60' : 'bg-white'}`}>
             <li>
               <Link href="/" className="text-base font-normal text-secondary">
-                Home
+              Home
               </Link>
             </li>
             <li>
@@ -55,7 +55,7 @@
         <ul
           className={`${
             isSidebarOpen ? 'block' : 'hidden'
-          } sm:hidden sm:flex sm:gap-5 sm:list-none bg-white bg-opacity-60 p-4 absolute top-0 right-0 h-[250px] w-screen backdrop-blur-lg`}
+          } sm:hidden sm:flex sm:gap-5 sm:list-none bg-white bg-opacity-60 p-4 absolute top-0 right-0 h-[250px] w-screen backdrop-blur-lg absolute top-0 z-10`}
         >
           <li className="flex justify-end">
             <button

@@ -3,7 +3,7 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <section className="home container relative">
+    <section className="home relative">
       <div className="home_content flex flex-col gap-10">
         <div className="relative">
           <img

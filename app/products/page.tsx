@@ -28,10 +28,10 @@ const ProductDetails = () => {
   }
 
   return (
-    <section className="products container py-16">
-      <div className="products_content flex flex-col gap-[30px] py-10 px-5">
-        <div className="flex flex-col gap-3 sm:gap-0 sm:flex-row justify-between items-center">
-          <h4 className="product-header text-center font-semibold text-2xl">Our Latest Product</h4>
+    <section className="products container pt-20 sm:pt-32 pb-2 sm:pb-12 px-2 sm:px-5 bg-light">
+      <div className="products_content flex flex-col gap-[30px] p-5 sm:p-20 bg-white">
+        <div className="flex flex-col gap-3 sm:gap-0 sm:flex-row justify-between items-start">
+          <h4 className="product-header text-primary">Our Latest Product</h4>
 
           <div className="">
             <select
@@ -41,7 +41,7 @@ const ProductDetails = () => {
               value={sortingOption}
               onChange={handleSortingChange}
             >
-              <option value="">Default sorting</option>
+              <option value="" className="text-primary">Default sorting</option>
               <option value="popularity">Sort by popularity</option>
               <option value="rating">Sort by average rating</option>
               <option value="latest">Sort by latest</option>
@@ -51,7 +51,7 @@ const ProductDetails = () => {
           </div>
         </div>
 
-        <div className="products-grid grid justify-items-center grid-cols-2 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2  gap-5 justify-center">
+        <div className="products-grid grid justify-items-center grid-cols-2 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-5 justify-center">
           {sortedProducts.map((product) => (
             <Link href={`/products/${product.name}`} key={product.name} className="product-link">
               <div className="product-card cursor-pointer">

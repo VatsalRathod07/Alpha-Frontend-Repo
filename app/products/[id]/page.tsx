@@ -56,10 +56,10 @@ const ProductDetails = () => {
     };
 
     return (
-        <section className="products_detail container py-16">
-            <div className="product_content py-10 px-5">
+        <section className="products_detail pt-2 sm:pt-10 pb-2 sm:pb-12 px-2 sm:px-5 bg-light">
+            <div className="product_content container p-5 sm:p-20 bg-white">
                 <div className="products-details flex flex-col gap-[50px]">
-                    <div className="flex sm:flex-row-reverse flex-col-reverse gap-[60px] items-center justify-around flex-small-device">
+                    <div className="flex sm:flex-row-reverse flex-col-reverse gap-[60px] items-center justify-between flex-small-device">
                         <div className="flex flex-col gap-5">
                             <p className="font-medium text-2xl font-signature">Maecenas efficitur ornare massa</p>
                             <h4 className="text-xl font-semibold text-primary">$120.00</h4>
@@ -69,7 +69,7 @@ const ProductDetails = () => {
                         </div>
 
                         <div className="product-bg-img flex flex-col gap-[10px]">
-                            <img src={mainImage} alt="Product Image" className="products_images w-[500px] h-[400px] sm:h-[500px] object-cover" />
+                            <img src={mainImage} alt="Product Image" className="products_images w-[500px] object-cover" />
 
                             <div className="products-small-images flex overflow-auto sm:overflow-hidden gap-2 cursor-pointer object-cover">
                                 {productsImages.map((product) => (
@@ -85,16 +85,29 @@ const ProductDetails = () => {
                         </div>
                     </div>
 
-                    <div className="mt-5 bg-light p-5 py-10">
+                    <div className="mt-5">
                         <p className="text-xl text-primary font-semibold">Product Information</p>
 
-                        <div className="flex flex-col gap-5 mt-5">
-                            <p className="text-2xl text-primary font-semibold">Maecenas efficitur ornare massa.</p>
-                            <div className="font-signature flex flex-col gap-5">
+                        <div className="flex flex-col gap-7 mt-5">
+                            <p className="text-2xl sm:text-3xl text-secondary font-signature">Maecenas efficitur ornare massa.</p>
+                            <div className="font-signature text-primary">
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam libero quasi vitae assumenda. Ratione ducimus commodi aperiam doloribus eum. Soluta impedit alias praesentium, perferendis officia quasi facere adipisci commodi unde nulla temporibus dolores, aspernatur iusto assumenda similique veritatis omnis?</p>
                             </div>
 
-                            <p></p>
+                            <div>
+                                <img src="https://d3gkbidvk2xej.cloudfront.net/images/products/2fe4a5f7-6dcd-453b-b0b8-81e18ef421d3/s/cast-iron-plant-coral-mid-century-ceramic-black-wood-stand.jpeg?version=1608582508.57490019800" alt="" className="" />
+                            </div>
+
+                            <div className="flex flex-col md:flex-row gap-4 sm:gap-0 p-0 sm:p-1">
+                                <p className="text-3xl text-secondary font-signature w-[50%]">Product Highlight</p>
+
+                                <div className="flex flex-col gap-5">
+                                    <li className="text-primary text-sm pb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+                                    <li className="text-primary text-sm pb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+                                    <li className="text-primary text-sm pb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+                                    <li className="text-primary text-sm pb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

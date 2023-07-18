@@ -109,7 +109,7 @@ const Product = () => {
           </Link>
         </div>
 
-        <div className="products-grid grid justify-items-center grid-cols-2 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 sm gap-5 justify-center">
+        <div className="products-grid grid justify-items-center grid-cols-2 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 sm gap-5 justify-center">
           {products.map((product) => (
             <Link href={`/products/${product.name}`} key={product.name} className="product-link">
               <div className="product-card cursor-pointer">

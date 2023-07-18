@@ -4,7 +4,7 @@ import { AiOutlineStar } from 'react-icons/ai'
 import { products } from '@/components/Products';
 import Link from 'next/link';
 
-const ProductDetails = ({}) => {
+const ProductDetails = () => {
   const [sortingOption, setSortingOption] = useState('');
 
   const handleSortingChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
@@ -16,7 +16,7 @@ const ProductDetails = ({}) => {
   if (sortingOption === 'popularity') {
     sortedProducts.sort((a, b) => b.popularity - a.popularity);
   } else if (sortingOption === 'rating') {
-    sortedProducts.sort((a, b) => b.rating - a.rating); 
+    sortedProducts.sort((a, b) => b.rating - a.rating);
   } else if (sortingOption === 'latest') {
     sortedProducts.sort((a, b) => new Date(b.date) - new Date(a.date));
   } else if (sortingOption === 'lowToHigh') {
@@ -60,7 +60,7 @@ const ProductDetails = ({}) => {
                 <div className="product-details py-1 flex flex-col gap-[2px]">
                   <div className="flex gap-[1px] text-primary text-sm">
                     <AiOutlineStar />
-                    <AiOutlineStar /> 
+                    <AiOutlineStar />
                     <AiOutlineStar />
                     <AiOutlineStar />
                   </div>

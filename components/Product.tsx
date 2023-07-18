@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import ProductsCard from './Products';
+import ProductsCard from './ProductsCard';
 
 const Product = () => {
 

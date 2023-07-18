@@ -1,8 +1,8 @@
 import React from 'react';
 import Home from '@/components/Home';
-import Product, { products } from '@/components/Product';
+import Product from '@/components/Product';
+import { products } from '@/components/Products';
 import About from '@/components/About';
-import NewsLetter from '@/components/NewsLetter';
 
 const Page = () => {
   return (
@@ -10,7 +10,6 @@ const Page = () => {
     <Home/>
     <Product products={products}/>
     <About/>
-    <NewsLetter/>
     </>
   );
 };

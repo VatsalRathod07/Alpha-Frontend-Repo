@@ -16,7 +16,7 @@
     };
 
     return (
-    <nav className={`nav  p-3 bg-white text-secondary ${isSidebarOpen ? 'sm:bg-white' : 'sm:bg-white'}`}>
+    <nav className={`nav p-3 py-5 bg-white text-secondary ${isSidebarOpen ? 'sm:bg-white' : 'sm:bg-white'}`}>
         <div className="navbar_content w-full flex justify-between p-1 items-center">
           <Link href="/" className="navbar_logo text-3xl font-medium text-secondary font-signature tracking-[.5px]">
             Alpha

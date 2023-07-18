@@ -1,10 +1,10 @@
 "use client"
 import React, { useState } from 'react';
-import { AiOutlineStar } from 'react-icons/ai';
-import { products } from '@/components/Product';
+import { AiOutlineStar } from 'react-icons/ai'
+import { products } from '@/components/Products';
 import Link from 'next/link';
 
-const ProductDetails = () => {
+const ProductDetails = ({}) => {
   const [sortingOption, setSortingOption] = useState('');
 
   const handleSortingChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
@@ -28,9 +28,9 @@ const ProductDetails = () => {
   }
 
   return (
-    <section className="products container pt-20 sm:pt-32 pb-2 sm:pb-12 px-2 sm:px-5 bg-light">
+    <section className="products container pt-5 sm:pt-16 pb-2 sm:pb-12 px-2 sm:px-5 bg-light">
       <div className="products_content flex flex-col gap-[30px] p-5 sm:p-20 bg-white">
-        <div className="flex flex-col gap-3 sm:gap-0 sm:flex-row justify-between items-start">
+        <div className="flex flex-col gap-3 sm:gap-0 sm:flex-row justify-between items-center">
           <h4 className="product-header text-primary">Our Latest Product</h4>
 
           <div className="">
@@ -50,7 +50,6 @@ const ProductDetails = () => {
             </select>
           </div>
         </div>
-
         <div className="products-grid grid justify-items-center grid-cols-2 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-5 justify-center">
           {sortedProducts.map((product) => (
             <Link href={`/products/${product.name}`} key={product.name} className="product-link">
@@ -61,7 +60,7 @@ const ProductDetails = () => {
                 <div className="product-details py-1 flex flex-col gap-[2px]">
                   <div className="flex gap-[1px] text-primary text-sm">
                     <AiOutlineStar />
-                    <AiOutlineStar />
+                    <AiOutlineStar /> 
                     <AiOutlineStar />
                     <AiOutlineStar />
                   </div>

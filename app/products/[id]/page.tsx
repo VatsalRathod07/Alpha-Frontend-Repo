@@ -59,17 +59,9 @@ const ProductDetails = () => {
         <section className="products_detail pt-2 sm:pt-10 pb-2 sm:pb-12 px-2 sm:px-5 bg-light">
             <div className="product_content container p-5 sm:p-20 bg-white">
                 <div className="products-details flex flex-col gap-[50px]">
-                    <div className="flex sm:flex-row-reverse flex-col-reverse gap-[60px] items-center justify-between flex-small-device">
-                        <div className="flex flex-col gap-5">
-                            <p className="font-medium text-2xl font-signature">Maecenas efficitur ornare massa</p>
-                            <h4 className="text-xl font-semibold text-primary">$120.00</h4>
-                            <p className="max-w-[400px] text-sm text-[#353535] font-normal">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo iusto culpa enim exercitationem! Laborum sequi dolorum alias expedita? Quo doloribus exercitationem minus iste velit molestiae aut saepe placeat fugit porro!.
-                            </p>
-                        </div>
-
+                    <div className="grid grid-cols-1 sm:grid-cols-[48%_48%] gap-[4%]">
                         <div className="product-bg-img flex flex-col gap-[10px]">
-                            <img src={mainImage} alt="Product Image" className="products_images w-[500px] object-cover" />
+                            <img src={mainImage} alt="Product Image" className="products_images w-full max-h-[500px] h-full object-cover" />
 
                             <div className="products-small-images flex overflow-auto sm:overflow-hidden gap-2 cursor-pointer object-cover">
                                 {productsImages.map((product) => (
@@ -83,6 +75,14 @@ const ProductDetails = () => {
                                 ))}
                             </div>
                         </div>
+
+                        <div className="flex flex-col gap-5">
+                            <p className="font-medium text-2xl font-signature">Maecenas efficitur ornare massa</p>
+                            <h4 className="text-xl font-semibold text-primary">$120.00</h4>
+                            <p className="max-w-[400px] text-sm text-[#353535] font-normal">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo iusto culpa enim exercitationem! Laborum sequi dolorum alias expedita? Quo doloribus exercitationem minus iste velit molestiae aut saepe placeat fugit porro!.
+                            </p>
+                        </div>
                     </div>
 
                     <div className="mt-5">
@@ -95,17 +95,17 @@ const ProductDetails = () => {
                             </div>
 
                             <div>
-                                <img src="https://d3gkbidvk2xej.cloudfront.net/images/products/2fe4a5f7-6dcd-453b-b0b8-81e18ef421d3/s/cast-iron-plant-coral-mid-century-ceramic-black-wood-stand.jpeg?version=1608582508.57490019800" alt="" className="" />
+                                <img src="https://d3gkbidvk2xej.cloudfront.net/images/products/2fe4a5f7-6dcd-453b-b0b8-81e18ef421d3/s/cast-iron-plant-coral-mid-century-ceramic-black-wood-stand.jpeg?version=1608582508.57490019800" alt="" className="w-full h-[400px] object-cover" />
                             </div>
 
-                            <div className="flex flex-col md:flex-row gap-4 sm:gap-0">
+                            <div className="flex flex-col justify-start md:flex-row gap-4 sm:gap-0 w-full">
                                 <p className="text-3xl text-secondary font-signature sm:w-[50%]">Product Highlight</p>
 
-                                <div className="flex flex-col gap-5">
-                                    <li className="text-primary text-sm pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod magnam vitae, placeat voluptatibus dolorum ducimus mollitia porro adipisci esse ipsa!</li>
-                                    <li className="text-primary text-sm pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod magnam vitae, placeat voluptatibus dolorum ducimus mollitia porro adipisci esse ipsa!</li>
-                                    <li className="text-primary text-sm pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod magnam vitae, placeat voluptatibus dolorum ducimus mollitia porro adipisci esse ipsa!</li>
-                                    <li className="text-primary text-sm pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod magnam vitae, placeat voluptatibus dolorum ducimus mollitia porro adipisci esse ipsa!</li>
+                                <div className="flex flex-col gap-3">
+                                    <li className="text-primary text-sm pb-2">Duis vel ipsum vitae est semper varius in id</li>
+                                    <li className="text-primary text-sm pb-2">Class aptent taciti sociosqu</li>
+                                    <li className="text-primary text-sm pb-2">Litora torquent per conubia nostra per</li>
+                                    <li className="text-primary text-sm pb-2">Inceptos himenaeos praesent</li>
                                 </div>
                             </div>
                         </div>
@@ -116,7 +116,7 @@ const ProductDetails = () => {
 
 
                 <div className="mt-12">
-                    <p className="text-base sm:text-xl text-primary font-semibold mb-5 capitalize recommended_products">You might be interested in these products</p>
+                    <p className="text-base sm:text-4xl text-secondary font-signature font-medium mb-5 capitalize">Related products</p>
 
                     <div className="products-grid grid justify-items-center grid-cols-2 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 sm gap-5 justify-center">
                         {products.map((product) => (

@@ -1,42 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import { products } from '@/components/Product';
-
-
-// const products = [
-//   {
-//     id: 1,
-//     image: 'https://websitedemos.net/plant-shop-02/wp-content/uploads/sites/931/2021/08/plants-ecommerce-product-featured-img-8.jpg',
-//   },
-//   {
-//     id: 2,
-//     image: 'https://websitedemos.net/plant-shop-02/wp-content/uploads/sites/931/2021/08/plants-ecommerce-product-featured-img-5.jpg',
-//   },
-//   {
-//     id: 3,
-//     image: 'https://websitedemos.net/plant-shop-02/wp-content/uploads/sites/931/2021/08/plants-ecommerce-product-featured-img-14.jpg',
-//   },
-//   {
-//     id: 4,
-//     image: 'https://websitedemos.net/plant-shop-02/wp-content/uploads/sites/931/2021/08/plants-ecommerce-product-featured-img-16.jpg',
-//   },
-//   {
-//     id: 5,
-//     image: 'https://websitedemos.net/plant-shop-02/wp-content/uploads/sites/931/2021/08/plants-ecommerce-product-featured-img-4.jpg',
-//   },
-//   {
-//     id: 6,
-//     image: 'https://websitedemos.net/plant-shop-02/wp-content/uploads/sites/931/2021/08/plants-ecommerce-product-featured-img-19.jpg',
-//   },
-//   {
-//     id: 7,
-//     image: 'https://websitedemos.net/plant-shop-02/wp-content/uploads/sites/931/2021/08/plants-ecommerce-product-featured-img-7.jpg',
-//   },
-//   {
-//     id: 8,
-//     image: 'https://websitedemos.net/plant-shop-02/wp-content/uploads/sites/931/2021/08/plants-ecommerce-product-featured-img-18.jpg',
-//   },
-// ]
+import { products } from '@/components/ProductsCard';
 
 const AboutUs = () => {
   return (

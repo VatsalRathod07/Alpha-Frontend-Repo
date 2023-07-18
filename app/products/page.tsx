@@ -35,8 +35,8 @@ const ProductDetails = () => {
 
           <div className="">
             <select
-              name=""
-              id=""
+              name="sort-products"
+              id="sort-products"
               className="bg-transparent focus:outline-none overflow-hidden text-sm"
               value={sortingOption}
               onChange={handleSortingChange}

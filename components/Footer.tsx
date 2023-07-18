@@ -67,7 +67,7 @@ const Footer = () => {
                 <div className="flex flex-col gap-5 items-center sm:items-start text-center sm:text-start">
                     <h1 className="text-2xl sm:text-3xl font-signature font-black">Subscribe to Our Newsletter</h1>
 
-                    <input type="text" className="focus:outline-none p-2 w-full sm:w-[260px]" placeholder="Your email address.."/>
+                    <input type="email" id="email" name="email" className="focus:outline-none p-2 w-full sm:w-[260px]" placeholder="Your email address.."/>
 
                     <button className="bg-secondary text-light px-5 py-1">Subscribe</button>
                 </div>

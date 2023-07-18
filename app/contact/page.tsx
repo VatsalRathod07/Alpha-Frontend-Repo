@@ -12,40 +12,41 @@ const Contact = () => {
                     <p className="max-w-[480px] text-base text-center sm:text-start">Sit vulputate faucibus eget eget scelerisque faucibus malesuada nullam mollis ut montes, dui scelerisque ornare.</p>
                     <div className="flex flex-col gap-2">
                         <div className="flex flex-col sm:flex-row gap-2 items-center">
-                            <BiMap size={20} className="text-primary"/>
+                            <BiMap size={20} className="text-primary" />
                             {/* <p className="font-signature font-bold text-primary text-lg">VISIT US</p> */}
-                        <p className="text-base text-center sm:text-start font-semibold text-primary">123 Demo St, San Francisco, CA 45678, United States</p>
+                            <p className="text-base text-center sm:text-start font-medium text-primary">123 Demo St, San Francisco, CA 45678, United States</p>
                         </div>
                     </div>
                     <div className="flex flex-col gap-2">
                         <div className="flex flex-col sm:flex-row gap-2 items-center">
-                            <IoCall size={20} className="text-primary"/>
+                            <IoCall size={20} className="text-primary" />
                             {/* <p className="font-signature font-bold text-primary text-lg">CALL US</p> */}
-                        <p className="text-base text-center sm:text-start font-semibold text-primary">+91 123-456-7890</p>
+                            <p className="text-base text-center sm:text-start font-medium text-primary">+91 123-456-7890</p>
                         </div>
                     </div>
                     <div className="flex flex-col gap-2">
                         <div className="flex flex-col sm:flex-row gap-2 items-center">
-                            <BiLogoGmail size={20} className="text-primary"/>
+                            <BiLogoGmail size={20} className="text-primary" />
                             {/* <p className="font-signature font-bold text-primary text-lg">EMAIL US</p> */}
-                        <p className="text-base text-center sm:text-start font-semibold text-primary">alpha@gmail.com</p>
+                            <p className="text-base text-center sm:text-start font-medium text-primary">alpha@gmail.com</p>
                         </div>
                     </div>
 
-                    <div className="flex flex-col gap-2 items-center sm:items-start">
+                    {/* <div className="flex flex-col gap-2 items-center sm:items-start">
                         <p className="font-signature font-bold text-primary text-center sm:text-start">FOLLOW US</p>
                         <div className="flex gap-5 text-primary">
-                            <BsInstagram size={25} className="text-primary hover:text-secondary cursor-pointer"/>
-                            <BsPinterest size={25} className="text-primary hover:text-secondary cursor-pointer"/>
-                            <BsFacebook size={25} className="text-primary hover:text-secondary cursor-pointer"/>
+                            <BsInstagram size={25} className="text-primary hover:text-secondary cursor-pointer" />
+                            <BsPinterest size={25} className="text-primary hover:text-secondary cursor-pointer" />
+                            <BsFacebook size={25} className="text-primary hover:text-secondary cursor-pointer" />
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
-                
+
                 <div>
-                    <img src="https://i.pinimg.com/736x/b9/b1/88/b9b18859a4ad4702ba076b2b0f118b92.jpg" alt="" className="w-[400px] h-[400px] object-cover"/>
+                    <img src="https://i.pinimg.com/736x/b9/b1/88/b9b18859a4ad4702ba076b2b0f118b92.jpg" alt="" className="w-[400px] h-[400px] object-cover" />
                 </div>
+
             </div>
         </section>
     )

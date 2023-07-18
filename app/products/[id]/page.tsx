@@ -44,16 +44,12 @@ const productsImages = [
         id: 3,
         image: 'https://i.pinimg.com/564x/e7/3e/4a/e73e4a8f0bff527be64a50d7883916ce.jpg',
     },
-    {
-        id: 4,
-        image: 'https://i.pinimg.com/564x/d4/24/76/d42476769ec6570fb4f2b07064019d5d.jpg',
-    },
 ]
 
 
 const ProductDetails = () => {
 
-    const [mainImage, setMainImage] = useState(products[1].image);
+    const [mainImage, setMainImage] = useState(productsImages[0].image);
 
     const handleImageChange = (newImage: React.SetStateAction<string>) => {
         setMainImage(newImage);
@@ -75,7 +71,7 @@ const ProductDetails = () => {
                         <div className="product-bg-img flex flex-col gap-[10px]">
                             <img src={mainImage} alt="Product Image" className="products_images w-[500px] h-[400px] sm:h-[500px] object-cover" />
 
-                            <div className="products-small-images flex overflow-auto cursor-pointer object-cover">
+                            <div className="products-small-images flex overflow-auto sm:overflow-hidden gap-2 cursor-pointer object-cover">
                                 {productsImages.map((product) => (
                                     <img
                                         key={product.id}
@@ -90,22 +86,21 @@ const ProductDetails = () => {
                     </div>
 
                     <div className="mt-5 bg-light p-5 py-10">
-                        <p className="text-xl text-[#353535] font-semibold">Product Information</p>
-
+                        <p className="text-xl text-primary font-semibold">Product Information</p>
 
                         <div className="flex flex-col gap-5 mt-5">
-                            <p className="text-2xl text-[#353535] font-semibold">Maecenas efficitur ornare massa.</p>
+                            <p className="text-2xl text-primary font-semibold">Maecenas efficitur ornare massa.</p>
                             <div className="font-signature flex flex-col gap-5">
-                                <p>Duis auctor nisl vitae purus interdum, quis congue lacus rutrum.</p>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam libero quasi vitae assumenda. Ratione ducimus commodi aperiam doloribus eum. Soluta impedit alias praesentium, perferendis officia quasi facere adipisci commodi unde nulla temporibus dolores, aspernatur iusto assumenda similique veritatis omnis?</p>
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam libero quasi vitae assumenda. Ratione ducimus commodi aperiam doloribus eum. Soluta impedit alias praesentium, perferendis officia quasi facere adipisci commodi unde nulla temporibus dolores, aspernatur iusto assumenda similique veritatis omnis?</p>
                             </div>
+
+                            <p></p>
                         </div>
                     </div>
                 </div>
 
                 <div className="mt-20">
-                    <p className="text-xl text-primary font-semibold mb-5 capitalize recommended_products">You might be interested in these products</p>
+                    <p className="text-base sm:text-xl text-primary font-semibold mb-5 capitalize recommended_products">You might be interested in these products</p>
 
                     <div className="products-grid grid justify-items-center grid-cols-2 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 sm gap-5 justify-center">
                         {products.map((product) => (

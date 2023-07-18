@@ -77,7 +77,7 @@
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-base font-normal text-black">
+              <Link href="/about" className="text-base font-normal text-black">
                 About
               </Link>
             </li>

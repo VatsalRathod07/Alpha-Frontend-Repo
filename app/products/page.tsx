@@ -28,8 +28,8 @@ const ProductDetails = () => {
   }
 
   return (
-    <section className="products container pt-5 sm:pt-16 pb-2 sm:pb-12 px-2 sm:px-5 bg-light">
-      <div className="products_content flex flex-col gap-[30px] p-5 sm:p-20 bg-white">
+    <section className="products pt-5 sm:pt-16 pb-5 sm:pb-12 px-2 sm:px-5 bg-light">
+      <div className="products_content container flex flex-col gap-[30px] p-5 sm:p-20 bg-white">
         <div className="flex flex-col gap-3 sm:gap-0 sm:flex-row justify-between items-center">
           <h4 className="product-header text-primary">Our Latest Product</h4>
 

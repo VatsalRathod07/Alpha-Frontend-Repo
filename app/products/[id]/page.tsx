@@ -56,7 +56,7 @@ const ProductDetails = () => {
     };
 
     return (
-        <section className="products_detail pt-2 sm:pt-10 pb-2 sm:pb-12 px-2 sm:px-5 bg-light">
+        <section className="products_detail pt-5 sm:pt-10 pb-5 sm:pb-12 px-2 sm:px-5 bg-light">
             <div className="product_content container p-5 sm:p-20 bg-white">
                 <div className="products-details flex flex-col gap-[50px]">
                     <div className="grid grid-cols-1 sm:grid-cols-[48%_48%] gap-[4%]">
@@ -95,7 +95,7 @@ const ProductDetails = () => {
                             </div>
 
                             <div>
-                                <img src="https://d3gkbidvk2xej.cloudfront.net/images/products/2fe4a5f7-6dcd-453b-b0b8-81e18ef421d3/s/cast-iron-plant-coral-mid-century-ceramic-black-wood-stand.jpeg?version=1608582508.57490019800" alt="" className="w-full h-[400px] object-cover" />
+                                <img src="https://blog-blossom.s3.appcnt.com/image/22/09/01/631073fe0a1ce/_orig/AMDU-9986_Blossom_cover_1180x504_1.jpg" alt="" className="w-full h-[400px] h-full object-cover" />
                             </div>
 
                             <div className="flex flex-col justify-start md:flex-row gap-4 sm:gap-0 w-full">
@@ -116,7 +116,7 @@ const ProductDetails = () => {
 
 
                 <div className="mt-12">
-                    <p className="text-base sm:text-4xl text-secondary font-signature font-medium mb-5 capitalize">Related products</p>
+                    <p className="text-3xl sm:text-4xl text-secondary font-signature font-medium mb-5 capitalize">Related products</p>
 
                     <div className="products-grid grid justify-items-center grid-cols-2 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 sm gap-5 justify-center">
                         {products.map((product) => (

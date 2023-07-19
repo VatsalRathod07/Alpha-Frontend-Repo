@@ -56,7 +56,7 @@ const ProductDetails = () => {
     };
 
     return (
-        <section className="products_detail pt-5 sm:pt-10 pb-5 sm:pb-12 px-2 sm:px-5 bg-light">
+        <section className="products_detail pt-5 sm:pt-10 pb-5z sm:pb-12 px-2 sm:px-5 bg-light">
             <div className="product_content container p-5 sm:p-20 bg-white">
                 <div className="products-details flex flex-col gap-[50px]">
                     <div className="grid grid-cols-1 sm:grid-cols-[48%_48%] gap-[4%]">
@@ -89,7 +89,7 @@ const ProductDetails = () => {
                         <p className="text-xl text-primary font-semibold">Product Information</p>
 
                         <div className="flex flex-col gap-7 mt-5">
-                            <p className="text-2xl sm:text-3xl text-secondary font-signature">Maecenas efficitur ornare massa.</p>
+                            <p className="text-xl sm:text-3xl text-secondary font-signature">Maecenas efficitur ornare massa.</p>
                             <div className="font-signature text-primary">
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam libero quasi vitae assumenda. Ratione ducimus commodi aperiam doloribus eum. Soluta impedit alias praesentium, perferendis officia quasi facere adipisci commodi unde nulla temporibus dolores, aspernatur iusto assumenda similique veritatis omnis?</p>
                             </div>

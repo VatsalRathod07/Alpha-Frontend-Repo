@@ -19,7 +19,7 @@ const Home = () => {
               Welcome To The Alpha Store
             </p>
             {/* <p className="text-white font-signature text-4xl sm:text-6xl font-normal sm:leading-[60px] w-[650px] sm:max-w-none md:w-[700px]">Let’s Bring the Spring to Your Home</p> */}
-            <p className="text-white font-signature text-4xl sm:text-6xl font-normal sm:leading-[60px]  w-[350px] sm:w-[700px]">Let’s Bring the Spring to Your Home</p>
+            <p className="text-white font-signature text-4xl sm:text-6xl font-normal sm:leading-[60px] w-[350px] sm:w-[700px]">Let’s Bring the Spring to Your Home</p>
 
             <Link href="/products" className="text-secondary bg-white font-medium px-5 py-2">
               Shop Now

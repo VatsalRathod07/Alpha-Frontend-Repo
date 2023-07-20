@@ -34,15 +34,15 @@ const products = [
 const productsImages = [
     {
         id: 1,
-        image: 'https://i.pinimg.com/564x/90/08/96/9008966be390880944a9a0d7089a56b3.jpg',
+        image: '/img/2.jpeg',
     },
     {
         id: 2,
-        image: 'https://i.pinimg.com/736x/fb/6b/38/fb6b38010f79100e0fb712ad4b9e562d.jpg',
+        image: '/img/3.jpeg',
     },
     {
         id: 3,
-        image: 'https://i.pinimg.com/564x/e7/3e/4a/e73e4a8f0bff527be64a50d7883916ce.jpg',
+        image: '/img/6.jpeg',
     },
 ]
 

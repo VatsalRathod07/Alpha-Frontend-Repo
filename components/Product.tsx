@@ -3,7 +3,6 @@ import React from 'react';
 import ProductsCard from './ProductsCard';
 
 const Product = () => {
-
   return (
     <section className="products container px-5 sm:px-10 py-20">
       <div className="products_content flex flex-col justify-between gap-[50px]">

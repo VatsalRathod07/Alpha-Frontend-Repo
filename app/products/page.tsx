@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { AiOutlineStar } from 'react-icons/ai'
-import { products } from '@/components/Products';
+import { products } from '@/components/ProductsCard'; 
 import Link from 'next/link';
 
 const ProductDetails = () => {
@@ -26,6 +26,8 @@ const ProductDetails = () => {
   } else {
     sortedProducts = [...products]; // Reset to default order
   }
+
+  console.log(sortedProducts, "sortedProducts.....")
 
   return (
     <section className="products pt-5 sm:pt-16 pb-5 sm:pb-12 px-2 sm:px-5 bg-light">
@@ -52,7 +54,7 @@ const ProductDetails = () => {
         </div>
         <div className="products-grid grid justify-items-center grid-cols-2 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-5 justify-center">
           {sortedProducts.map((product) => (
-            <Link href={`/products/${product.name}`} key={product.name} className="product-link">
+            <Link href={`/products/${product.name}`} key={product.id} className="product-link">
               <div className="product-card cursor-pointer">
                 <div>
                   <img src={product.image} alt={product.name} className="product-img w-full object-cover" />

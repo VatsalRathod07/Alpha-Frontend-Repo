@@ -13,7 +13,7 @@ const AboutUs = () => {
           </div>
           <div className="products-grid grid justify-items-center grid-cols-2 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 sm gap-5 justify-center">
             {products.map((product) => (
-              <Link href="https://www.instagram.com/" className="product-card cursor-pointer">
+              <Link key={product.id} href="https://www.instagram.com/" className="product-card cursor-pointer">
                 <img src={product.image} alt="product-image" className="product-img w-[300px] h-full object-cover" />
               </Link>
             ))}

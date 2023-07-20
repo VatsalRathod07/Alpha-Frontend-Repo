@@ -44,7 +44,7 @@ const FollowUs = () => {
 
                 <div className="products-grid flex flex-wrap justify-center gap-5">
                     {products.map((product) => (
-                        <Link href="https://www.instagram.com/" className="product-card cursor-pointer">
+                        <Link key={product.id} href="https://www.instagram.com/" className="product-card cursor-pointer">
                             <img src={product.image} alt="product-image" className="product-img w-[100px] h-[100px] object-cover" />
                         </Link>
                     ))}

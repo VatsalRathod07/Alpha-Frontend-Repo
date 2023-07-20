@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import { products } from '@/components/Products';
+import { products } from '@/components/ProductsCard';
 
 const AboutUs = () => {
   return (

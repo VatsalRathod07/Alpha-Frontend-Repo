@@ -56,10 +56,10 @@ export const categories: Category[] = [
     volatage: 220, // V
     companyId: 1001,
     features: [
+      "Latest & Robust Technology",
+      "No Wastage on flour",
       "Low Noise",
       "Low Electricity Consumption",
-      "No Wastage of flour",
-      "Changeable filter Screen",
     ],
     capacity: { value: [6, 23], unit: "KG" },
   },
@@ -101,10 +101,10 @@ export const categories: Category[] = [
     volatage: 220, // V
     companyId: 1001,
     features: [
-      "100% Nutritional value on Flour & Spices",
-      "No Wastage of flour",
-      "Changeable filter Screen",
-      "Stylish and attractive range of Models",
+      "Latest & Robust Technology",
+      "No Wastage on flour",
+      "Low Noise",
+      "Low Electricity Consumption",
     ],
     capacity: { value: [6, 23], unit: "KG" },
   },
@@ -122,10 +122,10 @@ export const categories: Category[] = [
     volatage: 220, // V
     companyId: 4001,
     features: [
-      "Stylish and attractive range of Models",
-      "Affordable priced & uncompromised quality products",
       "Latest & Robust Technology",
-      "Having the ability to meet the needs of the market",
+      "No Wastage on flour",
+      "Low Noise",
+      "Low Electricity Consumption",
     ],
     capacity: { value: [6, 23], unit: "KG" },
   },
@@ -143,10 +143,10 @@ export const categories: Category[] = [
     volatage: 220, // V
     companyId: 1001,
     features: [
-      "Strong edge on competition Plugged in and Grind, Simple",
+      "Latest & Robust Technology",
+      "No Wastage on flour",
       "Low Noise",
       "Low Electricity Consumption",
-      "No Wastage of flour",
     ],
     capacity: { value: [6, 23], unit: "KG" },
   },

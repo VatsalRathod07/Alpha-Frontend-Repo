@@ -7,7 +7,7 @@ interface categories{
 }
 const PricingCard = ({name , price , features}: categories) => {
   return (
-   <div className="flex items-center h-screen cursor-pointer">
+   <div className="flex items-center cursor-pointer">
         <div className="bg-white shadow-2xl hover:bg-[#402E86] hover:text-white transition duration-300 ease-in-out rounded-lg hover:shadow-3xl p-6 max-w-sm w-full">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9VQEBjCgG4pvYgf01DF84YNSb2N2biill7Q&usqp=CAU" alt="Product Image" className="w-full h-36 mx-auto rounded-md mb-4 object-cover" />
             <h2 className="text-3xl font-semibold mb-4">{name}</h2>

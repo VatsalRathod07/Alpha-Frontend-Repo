@@ -12,7 +12,7 @@ const PricingSection = () => {
     }, [])
     return (
         <div>
-            <div className='grid grid-cols-3 gap-5 mx-4'>
+            <div className='grid grid-cols-3 gap-5 m-10'>
                 {categories.map((data) => {
                     return (
                         <div key={data?.id} data-aos="flip-up">

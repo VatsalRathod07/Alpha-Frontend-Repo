@@ -4,7 +4,7 @@ import { BsFacebook, BsPinterest, BsInstagram } from 'react-icons/bs'
 
 const Footer = () => {
     return (
-        <footer className="footer flex flex-col gap-5 bg-secondary p-10">
+        <footer className="footer flex flex-col gap-5 p-10 bg-secondary">
             <div className="footer_content flex justify-center gap-10 items-center text-white">
                 <Link href="/">Home</Link>
                 <Link href="/products">Products</Link>
@@ -36,46 +36,7 @@ const Footer = () => {
 
             <p className="text-center text-white opacity-60 text-base">©2023 Alpha Shop. All Rights Reserved</p>
 
-            {/* <div className="grid justify-items-center md:justify-items-start grid-cols-1 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-3 gap-10 sm:gap-5 justify-center">
-                <div className="flex flex-col gap-5 text-center sm:text-start">
-                    <h1 className="text-3xl font-signature font-black">Alpha</h1>
-                    <p className="text-sm text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe odio veritatis perspiciatis asperiores minus doloribus veniam dicta reiciendis ad.</p>
-                </div>
 
-
-                <div className="flex flex-col gap-5 text-center sm:text-start">
-                    <h1 className="text-3xl font-signature font-black">Quick Links</h1>
-
-                    <div className="flex flex-col gap-2 text-sm">
-                        <Link href="/">Home</Link>
-                        <Link href="/products">Products</Link>
-                        <Link href="/about">About</Link>
-                        <Link href="/contact">Contact</Link>
-                    </div>
-                </div>
-
-                <div className="flex flex-col gap-5 text-center sm:text-start">
-                    <h1 className="text-3xl font-signature font-black">Our Socials</h1>
-
-                    <div className="flex gap-5 justify-center sm:justify-start">
-                        <BsInstagram size={20} className="text-secondary cursor-pointer" />
-                        <BsPinterest size={20} className="text-secondary cursor-pointer" />
-                        <BsFacebook size={20} className="text-secondary cursor-pointer" />
-                    </div>
-                </div>
-
-                <div className="flex flex-col gap-5 items-center sm:items-start text-center sm:text-start">
-                    <h1 className="text-2xl sm:text-3xl font-signature font-black">Subscribe to Our Newsletter</h1>
-
-                    <input type="email" id="email" name="email" className="focus:outline-none p-2 w-full sm:w-[260px]" placeholder="Your email address.."/>
-
-                    <button className="bg-secondary text-light px-5 py-1">Subscribe</button>
-                </div>
-            </div>
-
-            <div className="text-center mt-10 text-sm text-primary">
-                <p>Copyright © 2023 Alpha. All Rights Reserved</p>
-            </div> */}
         </footer>
     )
 }

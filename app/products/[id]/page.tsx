@@ -1,7 +1,11 @@
 "use client";
+import React, { useRef, useEffect, useState } from "react";
 import Link from "next/link";
-import React, { useState } from "react";
 import { AiOutlineStar } from "react-icons/ai";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 const products = [
   {
@@ -58,30 +62,71 @@ const ProductDetails = () => {
     setMainImage(newImage);
   };
 
+
+  const [isSmallDevice, setIsSmallDevice] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallDevice(window.innerWidth <= 640); // Adjust the breakpoint as needed
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+
+
+  const sliderSettings = {
+    autoplay: true,
+    autoplaySpeed: 3000, // Set the duration between automatic slides (in milliseconds)
+    arrows: true,
+    dots: true // Hide navigation arrows if needed
+  };
+
   return (
     <section className="products_detail pt-5 sm:pt-10 pb-5z sm:pb-12 px-2 sm:px-5 bg-light">
       <div className="product_content container p-5 sm:p-20 bg-white">
         <div className="products-details flex flex-col gap-[50px]">
           <div className="grid grid-cols-1 sm:grid-cols-[48%_48%] gap-[4%]">
-            <div className="product-bg-img flex flex-col gap-[10px]">
-              <img
-                src={mainImage}
-                alt="Product Image"
-                className="products_images w-full h-full"
-              />
-
-              <div className="products-small-images flex overflow-auto sm:overflow-hidden gap-2 cursor-pointer object-cover">
+            {isSmallDevice ? (
+              <Slider {...sliderSettings}>
                 {productsImages.map((product) => (
-                  <img
-                    key={product.id}
-                    src={product.image}
-                    alt="Product Image"
-                    className="products_images w-[100px] object-contain p-1 hover:border-pale hover:border-[2px]"
-                    onClick={() => handleImageChange(product.image)}
-                  />
+                  <div key={product.id}>
+                    <img
+                      src={product.image}
+                      alt="Product Image"
+                      className="products_images w-full h-full"
+                      onClick={() => handleImageChange(product.image)}
+                    />
+                  </div>
                 ))}
+              </Slider>
+            ) : (
+              <div className="product-bg-img flex flex-col gap-[10px]">
+                <img
+                  src={mainImage}
+                  alt="Product Image"
+                  className="products_images w-full h-full"
+                />
+
+                <div className="products-small-images flex overflow-auto sm:overflow-hidden gap-2 cursor-pointer object-cover">
+                  {productsImages.map((product) => (
+                    <img
+                      key={product.id}
+                      src={product.image}
+                      alt="Product Image"
+                      className="products_images w-[100px] object-contain p-1 hover:border-pale hover:border-[2px]"
+                      onClick={() => handleImageChange(product.image)}
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
+
 
             <div className="flex flex-col gap-5">
               <p className="font-medium text-2xl font-signature">

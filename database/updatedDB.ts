@@ -26,7 +26,7 @@ interface Category {
   name: string;
   material: string;
   price: {
-    value: number;
+    value: string;
     currency: Currency.INR;
     discount: {
       type: DiscountType.Percent;
@@ -41,21 +41,26 @@ interface Category {
   media?: ProductMediaType[];
 }
 
-const categories: Category[] = [
+export const categories: Category[] = [
   {
     id: 2001,
     rank: 5,
     name: "Reguler",
     material: "",
     price: {
-      value: 10500,
+      value: "10,500",
       currency: Currency.INR,
       discount: null,
     },
     weight: 45, // KG,
     volatage: 220, // V
     companyId: 1001,
-    features: [],
+    features: [
+      "Low Noise",
+      "Low Electricity Consumption",
+      "No Wastage of flour",
+      "Changeable filter Screen",
+    ],
     capacity: { value: [6, 23], unit: "KG" },
   },
   {
@@ -64,7 +69,7 @@ const categories: Category[] = [
     name: "Classic",
     material: "",
     price: {
-      value: 11500,
+      value: "11,500",
       currency: Currency.INR,
       discount: {
         type: DiscountType.Percent,
@@ -74,7 +79,12 @@ const categories: Category[] = [
     weight: 45, // KG,
     volatage: 220, // V
     companyId: 1001,
-    features: [],
+    features: [
+      "Latest & Robust Technology",
+      "No Wastage on flour",
+      "Low Noise",
+      "Low Electricity Consumption",
+    ],
     capacity: { value: [6, 23], unit: "KG" },
   },
   {
@@ -83,14 +93,19 @@ const categories: Category[] = [
     name: "Premium",
     material: "",
     price: {
-      value: 12500,
+      value: "12,500",
       currency: Currency.INR,
       discount: null,
     },
     weight: 45, // KG,
     volatage: 220, // V
     companyId: 1001,
-    features: [],
+    features: [
+      "100% Nutritional value on Flour & Spices",
+      "No Wastage of flour",
+      "Changeable filter Screen",
+      "Stylish and attractive range of Models",
+    ],
     capacity: { value: [6, 23], unit: "KG" },
   },
   {
@@ -99,14 +114,19 @@ const categories: Category[] = [
     name: "Diamond",
     material: "",
     price: {
-      value: 14500,
+      value: "14,500",
       currency: Currency.INR,
       discount: null,
     },
     weight: 45, // KG,
     volatage: 220, // V
     companyId: 4001,
-    features: [],
+    features: [
+      "Stylish and attractive range of Models",
+      "Affordable priced & uncompromised quality products",
+      "Latest & Robust Technology",
+      "Having the ability to meet the needs of the market",
+    ],
     capacity: { value: [6, 23], unit: "KG" },
   },
   {
@@ -115,14 +135,19 @@ const categories: Category[] = [
     name: "Diamond Plus",
     material: "",
     price: {
-      value: 15000,
+      value: "15,000",
       currency: Currency.INR,
       discount: null,
     },
     weight: 45, // KG,
     volatage: 220, // V
     companyId: 1001,
-    features: [],
+    features: [
+      "Strong edge on competition Plugged in and Grind, Simple",
+      "Low Noise",
+      "Low Electricity Consumption",
+      "No Wastage of flour",
+    ],
     capacity: { value: [6, 23], unit: "KG" },
   },
 ];

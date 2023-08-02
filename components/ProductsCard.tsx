@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const products = [
     {
-        id: 10,
+        id: 1,
         name: "tune",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",
@@ -17,7 +17,7 @@ export const products = [
         rating: "6",
     },
     {
-        id: 5,
+        id: 2,
         name: "perfect",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",
@@ -30,7 +30,7 @@ export const products = [
         rating: "3",
     },
     {
-        id: 5,
+        id: 3,
         name: "electricity",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",
@@ -43,7 +43,7 @@ export const products = [
         rating: "3",
     },
     {
-        id: 23,
+        id: 4,
         name: "torn",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",
@@ -56,7 +56,7 @@ export const products = [
         rating: "4",
     },
     {
-        id: 9,
+        id: 5,
         name: "package",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",
@@ -70,7 +70,7 @@ export const products = [
         popularity: "8",
     },
     {
-        id: 22,
+        id: 6,
         name: "labor",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",
@@ -84,7 +84,7 @@ export const products = [
         popularity: "7",
     },
     {
-        id: 1,
+        id: 7,
         name: "compound",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",
@@ -98,7 +98,7 @@ export const products = [
         popularity: "4",
     },
     {
-        id: 12,
+        id: 8,
         name: "anyway",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",
@@ -111,7 +111,7 @@ export const products = [
         rating: "6",
     },
     {
-        id: 17,
+        id: 9,
         name: "fall",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",
@@ -124,7 +124,7 @@ export const products = [
         rating: "3",
     },
     {
-        id: 6,
+        id: 10,
         name: "hair",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",
@@ -138,7 +138,7 @@ export const products = [
         popularity: "8",
     },
     {
-        id: 2,
+        id: 11,
         name: "wall",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",
@@ -152,7 +152,7 @@ export const products = [
         popularity: "8",
     },
     {
-        id: 13,
+        id: 12,
         name: "mistake",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",
@@ -166,7 +166,7 @@ export const products = [
         popularity: "7",
     },
     {
-        id: 17,
+        id: 13,
         name: "rice",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",
@@ -180,7 +180,7 @@ export const products = [
         popularity: "4",
     },
     {
-        id: 6,
+        id: 14,
         name: "success",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",
@@ -193,7 +193,7 @@ export const products = [
         rating: "3",
     },
     {
-        id: 14,
+        id: 15,
         name: "general",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",
@@ -206,7 +206,7 @@ export const products = [
         rating: "4",
     },
     {
-        id: 2,
+        id: 16,
         name: "highest",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",
@@ -220,7 +220,7 @@ export const products = [
         popularity: "8",
     },
     {
-        id: 23,
+        id: 17,
         name: "growth",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",
@@ -248,7 +248,7 @@ export const products = [
         popularity: "7",
     },
     {
-        id: 7,
+        id: 19,
         name: "paint",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",
@@ -262,7 +262,7 @@ export const products = [
         popularity: "4",
     },
     {
-        id: 22,
+        id: 20,
         name: "carried",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",
@@ -275,7 +275,7 @@ export const products = [
         rating: "4",
     },
     {
-        id: 22,
+        id: 21,
         name: "final",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",
@@ -289,7 +289,7 @@ export const products = [
         popularity: "8",
     },
     {
-        id: 17,
+        id: 22,
         name: "area",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",
@@ -303,7 +303,7 @@ export const products = [
         popularity: "8",
     },
     {
-        id: 14,
+        id: 23,
         name: "ship",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",
@@ -317,7 +317,7 @@ export const products = [
         popularity: "7",
     },
     {
-        id: 21,
+        id: 24,
         name: "barn",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",
@@ -331,7 +331,7 @@ export const products = [
         popularity: "4",
     },
     {
-        id: 1,
+        id: 25,
         name: "nervous",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, rerum.",

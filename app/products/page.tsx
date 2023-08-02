@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { AiOutlineStar } from "react-icons/ai";
 import { products as sortedProducts } from "@/components/ProductsCard";
 import Link from "next/link";
+import Pagination from "@/components/Pagination";
 
 const ProductDetails = () => {
   const [sortingOption, setSortingOption] = useState("");
@@ -31,6 +32,13 @@ const ProductDetails = () => {
 
   // console.log(sortedProducts, "sortedProducts.....")
 
+  const pageSize = 6
+  const [currentPage, setCurrentPage] = useState(1)
+
+  const indexOfLastProduct = currentPage * pageSize;
+  const indexOfFirstProduct = indexOfLastProduct - pageSize;
+  const paginatedProducts = sortedProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+
   return (
     <section className="products pt-5 sm:pt-16 pb-5 sm:pb-12 px-2 sm:px-5 bg-light">
       <div className="products_content container flex flex-col gap-[30px] p-5 sm:p-16 bg-white">
@@ -57,7 +65,7 @@ const ProductDetails = () => {
           </div>
         </div>
         <div className="products-grid grid justify-items-center grid-cols-2 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-5 justify-center">
-          {sortedProducts.map((product) => (
+          {paginatedProducts.map((product) => (
             <Link
               href={`/products/${product.name}`}
               key={product.id}
@@ -89,6 +97,7 @@ const ProductDetails = () => {
             </Link>
           ))}
         </div>
+        <Pagination total={sortedProducts?.length} pageSize={pageSize} onClick={(number: number) => { setCurrentPage(number) }} activePage={currentPage} />
       </div>
     </section>
   );

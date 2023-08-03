@@ -4,8 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 * {
     margin: 0;
     padding: 0;
@@ -21,127 +19,11 @@ body {
     background-color: #FFF;
 }
 
-
-/* For WebKit browsers (Chrome, Safari, etc.) */
 ::-webkit-scrollbar {
-    /* width: 3px;
-    height: 2px; */
     display: none;
 }
-
- /* ::-webkit-scrollbar-track {
-    background: transparent;
-} 
-
-::-webkit-scrollbar-thumb {
-    background: #343434;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #353535;
-}
-  */
 
  .container {
     max-width: 1440px;
     margin: 0 auto;
 }
-
-/* .about-link {
-    text-decoration: underline #E0E0E0;
-    color: #343434;
-    font-size: 20px;
-    font-family: EB Garamond;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 25px;
-} */
-
-/* Responsive Layout */
-
-/* Mobile Styles */
-/* @media screen and (max-width: 767px) {
-
-    .home_content {
-        padding: 30px 20px;
-    }
-
-    .home_description {
-        font-size: 16px;
-    }
-
-    .products_grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .footer_grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .about-image {
-        width: 350px;
-    }
-
-    .about_contnet {
-        flex-direction: column-reverse;
-        gap: 30px;
-    }
-
-    .navbar_content {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .navbar_list {
-        display: none;
-    }
-
-    .navbar_logo {
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .flex-small-device {
-        flex-direction: column-reverse;
-        gap: 20px;
-        align-items: flex-start;
-    }
-
-    .recommended_products {
-        text-align: center;
-    }
-    
-} */
-
-/* Tablet Styles */
-/* @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .products_grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .product-img {
-        width: 100%;
-    }
-
-    .about_contnet {
-        flex-direction: column-reverse;
-        gap: 30px;
-    }
-
-} */
-
-/* Desktop Styles */
-/* @media screen and (min-width: 1024px) {
-    .products_grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .footer_grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .about_contnet {
-        padding: 40px;
-    }
-
-} */

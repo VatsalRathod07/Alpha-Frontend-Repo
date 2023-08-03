@@ -179,7 +179,7 @@ interface Product {
   media: ProductMediaType[];
 }
 
-const newProducts: Product[] = [
+export const newProducts: Product[] = [
   {
     id: 3001,
     type: ProductType.Aatamaker,
@@ -236,6 +236,38 @@ const newProducts: Product[] = [
     rank: 2,
     sellCount: 11,
     rating: 4.5,
+    companyId: 1001,
+    media: [
+      {
+        type: "video",
+        url: "http://www.google.com/",
+      },
+    ],
+  },
+  {
+    id: 3004,
+    type: ProductType.Aatamaker,
+    categoryId: 2002,
+    name: "Product 3003",
+    rank: 2,
+    sellCount: 11,
+    rating: 4.5,
+    companyId: 1001,
+    media: [
+      {
+        type: "image",
+        url: "http://www.google.com/",
+      },
+    ],
+  },
+  {
+    id: 3005,
+    type: ProductType.Aatamaker,
+    categoryId: 2002,
+    name: "Product 3005",
+    rank: 3,
+    sellCount: 6,
+    rating: 5,
     companyId: 1001,
     media: [
       {

@@ -14,7 +14,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head></head>
+      <head>
+        <link
+          rel="shortcut icon"
+          href="https://media.istockphoto.com/id/172401912/photo/grinding-wheat-into-flour.jpg?s=170667a&w=0&k=20&c=qVyvY5LV5KxfrRPW4TtFpW0vC3FJJjeZ1lHfJobr2fQ="
+        />
+      </head>
       <body>
         <Navbar />
         {children}

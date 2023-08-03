@@ -9,7 +9,6 @@ const Page = () => {
     <>
       <Home />
       <PricingSection />
-      <Product />
       <About />
     </>
   );

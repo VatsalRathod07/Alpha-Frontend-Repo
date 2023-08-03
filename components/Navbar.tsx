@@ -1,11 +1,12 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { HiMenu } from "react-icons/hi";
 import { GrFormClose } from "react-icons/gr";
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isNavbarScroll, setIsNavbarScroll] = useState(false);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -15,11 +16,32 @@ const Navbar = () => {
     setIsSidebarOpen(false);
   };
 
+  useEffect(() => {
+    let isScrollingTimer: any;
+
+    const handleScroll = () => {
+      if (isScrollingTimer) {
+        clearTimeout(isScrollingTimer);
+      }
+      setIsNavbarScroll(true);
+      isScrollingTimer = setTimeout(() => {
+        setIsNavbarScroll(false);
+      }, 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <nav
-      className={`nav p-3 py-5 bg-white text-secondary ${
+      className={`p-3 py-5 z-10 w-full bg-white text-secondary sticky ${
         isSidebarOpen ? "sm:bg-white" : "sm:bg-white"
-      }`}
+      } 
+      ${isNavbarScroll ? "top-[-100]" : "top-0 shadow-lg"}`}
     >
       <div className="navbar_content w-full flex justify-between p-1 items-center">
         <Link
@@ -75,7 +97,7 @@ const Navbar = () => {
       <ul
         className={`${
           isSidebarOpen ? "block" : "hidden"
-        } sm:hidden sm:flex sm:gap-5 sm:list-none bg-white bg-opacity-60 p-4 absolute top-0 right-0 h-[250px] w-screen backdrop-blur-lg z-10`}
+        } sm:hidden sm:flex sm:gap-5 sm:list-none bg-white bg-opacity-60 p-4 absolute top-0 right-0 h-[250px] w-screen backdrop-blur-lg absolute top-0 z-10`}
       >
         <li className="flex justify-end">
           <button

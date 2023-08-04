@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import React, { useState, useEffect, useMemo, useCallback } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { AiOutlineStar } from "react-icons/ai";
 import { products as sortedProducts } from "@/components/ProductsCard";
 import Link from "next/link";
@@ -23,10 +23,6 @@ const ProductDetails = () => {
   const [selectedCategory, setSelectedCatgory] = useState<any>(null);
   const indexOfLastProduct = currentPage * pageSize;
   const indexOfFirstProduct = indexOfLastProduct - pageSize;
-  const paginatedProducts = sortedProducts.slice(
-    indexOfFirstProduct,
-    indexOfLastProduct
-  );
   const search: any = useSearchParams();
   const category = search.get("category");
 
@@ -37,11 +33,15 @@ const ProductDetails = () => {
   }, [category]);
 
   const filteredProducts = useMemo(() => {
-    const data =
-      category &&
-      newProducts.filter((data) => data.categoryId === selectedCategory);
-    return data;
-  }, [category, selectedCategory]);
+    if (!!selectedCategory) {
+      const data = newProducts.filter(
+        (data) => data.categoryId === Number(selectedCategory)
+      );
+      return data;
+    } else {
+      return;
+    }
+  }, [selectedCategory]);
 
   return (
     <div className="flex w-full">
@@ -72,13 +72,15 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
-      <section className="w-[75%] products pt-5 sm:pt-16 pb-5 sm:pb-12 px-2 sm:px-5 bg-light">
-        <div className="products_content container flex flex-col gap-[30px] p-5 sm:p-16 bg-white">
+      <section className="w-[75%] products pt-5 pb-5 sm:pb-12 px-2 sm:px-5 bg-light">
+        <div className="container flex flex-col gap-[30px] py-5 px-8 bg-white">
           <div className="flex flex-col gap-3 sm:gap-0 sm:flex-row justify-between items-center">
-            <h4 className="product-header text-primary">Our Latest Product</h4>
+            <h4 className="font-semibold text-lg text-primary">
+              Our Latest Product
+            </h4>
 
             <div className="">
-              <select
+              {/* <select
                 name="sort-products"
                 id="sort-products"
                 className="bg-transparent focus:outline-none overflow-hidden text-sm"
@@ -93,50 +95,45 @@ const ProductDetails = () => {
                 <option value="latest">Sort by latest</option>
                 <option value="lowToHigh">Sort by price: low to high</option>
                 <option value="highToLow">Sort by price: high to low</option>
-              </select>
+              </select> */}
             </div>
           </div>
-          <div className="products-grid grid justify-items-center grid-cols-2 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-5 justify-center">
-            {paginatedProducts.map((product) => (
-              <Link
-                href={`/products/${product.name}`}
-                key={product.id}
-                className="product-link"
-              >
-                <div className="product-card cursor-pointer">
-                  <div>
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="product-img w-full object-cover"
-                    />
-                  </div>
-                  <div className="product-details py-1 flex flex-col gap-[2px]">
-                    <div className="flex gap-[1px] text-primary text-sm">
-                      <AiOutlineStar />
-                      <AiOutlineStar />
-                      <AiOutlineStar />
-                      <AiOutlineStar />
+          <div className="grid justify-items-center grid-cols-2 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-5 justify-center">
+            {(filteredProducts || []).map((product: any) => {
+              console.log(product, "product");
+              return (
+                <Link
+                  href={`/products/${product.name}`}
+                  key={product.id}
+                  className="product-link"
+                >
+                  <div className="product-card cursor-pointer">
+                    <div>
+                      <img
+                        src={product?.media[0]?.url?.src}
+                        alt={product.name}
+                        className="product-img w-full object-cover"
+                      />
                     </div>
-                    <p className="product-name font-signature text-secondary font-normal text-base">
-                      {product.name}
-                    </p>
-                    <p className="product-price text-sm text-primary font-bold">
-                      {product.price}
-                    </p>
+                    <div className="product-details py-1 flex flex-col gap-[2px]">
+                      <div className="flex gap-[1px] text-primary text-sm">
+                        <AiOutlineStar />
+                        <AiOutlineStar />
+                        <AiOutlineStar />
+                        <AiOutlineStar />
+                      </div>
+                      <p className="product-name font-signature text-secondary font-normal text-base">
+                        {product.name}
+                      </p>
+                      <p className="product-price text-sm text-primary font-bold">
+                        {product.price}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              );
+            })}
           </div>
-          <Pagination
-            total={sortedProducts?.length}
-            pageSize={pageSize}
-            onClick={(number: number) => {
-              setCurrentPage(number);
-            }}
-            activePage={currentPage}
-          />
         </div>
       </section>
     </div>

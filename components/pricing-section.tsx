@@ -9,15 +9,36 @@ import { useRouter } from "next/navigation";
 const PricingSection = () => {
   const router = useRouter();
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 1500 });
   }, []);
 
   return (
-    <div>
-      <div className="grid grid-cols-3 gap-5 mx-4">
-        {categories.map((data) => {
+    <div
+      style={{
+        backgroundImage:
+          "url(https://tech-utsav-aiet.vercel.app/static/media/events_bg.9c3db51e672c4010f0df.svg)",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
+    >
+      <div className="flex justify-center gap-10 p-6">
+        {categories.slice(0, 3).map((data) => {
           return (
-            <div key={data?.id} data-aos="flip-up">
+            <div key={data?.id} data-aos="flip-right">
+              <Card
+                name={data.name}
+                price={data.price.value}
+                features={data.features}
+                onClick={() => router.push(`/products?category=${data.id}`)}
+              />
+            </div>
+          );
+        })}
+      </div>
+      <div className="flex justify-center gap-5">
+        {categories.slice(3, 5).map((data) => {
+          return (
+            <div key={data?.id} data-aos="flip-right">
               <Card
                 name={data.name}
                 price={data.price.value}

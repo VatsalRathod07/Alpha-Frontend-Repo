@@ -8,11 +8,11 @@ interface categories {
 }
 const PricingCard = ({ name, price, features, onClick }: categories) => {
   return (
-    <div
-      className="flex items-center h-screen cursor-pointer"
-      onClick={onClick}
-    >
-      <div className="bg-white shadow-2xl hover:bg-[#402E86] hover:text-white transition duration-300 ease-in-out rounded-lg hover:shadow-3xl p-6 max-w-sm w-full">
+    <div className="flex items-center cursor-pointer" onClick={onClick}>
+      <div
+        className=" shadow-2xl hover:bg-[#402E86] hover:text-white transition duration-300 ease-in-out rounded-lg hover:shadow-3xl p-6 max-w-sm w-full"
+        style={{ background: "linear-gradient(45deg,#ffbc00,#ff0058)" }}
+      >
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9VQEBjCgG4pvYgf01DF84YNSb2N2biill7Q&usqp=CAU"
           alt="Product Image"

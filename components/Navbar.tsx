@@ -3,8 +3,10 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { HiMenu } from "react-icons/hi";
 import { GrFormClose } from "react-icons/gr";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
+  const router = useRouter();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isNavbarScroll, setIsNavbarScroll] = useState(false);
 
@@ -36,6 +38,8 @@ const Navbar = () => {
     };
   }, []);
 
+  const linkStyle =
+    "text-base font-medium text-secondary hover:text-light-purple hover:font-semibold";
   return (
     <nav
       className={`p-3 py-5 z-10 w-full bg-white text-secondary sticky ${
@@ -43,12 +47,16 @@ const Navbar = () => {
       } 
       ${isNavbarScroll ? "top-[-100]" : "top-0 shadow-lg"}`}
     >
-      <div className="navbar_content w-full flex justify-between p-1 items-center">
+      <div className="w-full flex justify-between p-1 items-center">
         <Link
           href="/"
           className="navbar_logo text-3xl font-medium text-secondary font-signature tracking-[.5px]"
         >
-          Alpha
+          <img
+            className="h-10 w-16 object-cover"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSxdTKeLmDM7ezeuP_Q0lj2NlFsGy5_2aiAw&usqp=CAU"
+            alt="icon"
+          />
         </Link>
         <div className="flex justify-between gap-5 list-none sm:hidden">
           <button
@@ -64,40 +72,37 @@ const Navbar = () => {
           }`}
         >
           <li>
-            <Link href="/" className="text-base font-normal text-secondary">
+            <Link href="/" className={`${linkStyle}`}>
               Home
             </Link>
           </li>
           <li>
-            <Link
-              href="/products"
-              className="text-base font-normal text-secondary"
-            >
+            <Link href="/products" className={`${linkStyle}`}>
               Products
             </Link>
           </li>
           <li>
-            <Link
-              href="/about"
-              className="text-base font-normal text-secondary"
-            >
+            <Link href="/about" className={`${linkStyle}`}>
               About
             </Link>
           </li>
           <li>
-            <Link
-              href="/contact"
-              className="text-base font-normal text-secondary"
-            >
+            <Link href="/contact" className={`${linkStyle}`}>
               Contact
             </Link>
           </li>
         </ul>
+        <button
+          className="px-6 py-3 font-medium hover:shadow-xl bg-light-purple border-solid border-2 rounded-md transition ease-in-out duration-300 text-white"
+          onClick={() => router.push("/about")}
+        >
+          Get Started
+        </button>
       </div>
       <ul
         className={`${
           isSidebarOpen ? "block" : "hidden"
-        } sm:hidden sm:flex sm:gap-5 sm:list-none bg-white bg-opacity-60 p-4 absolute top-0 right-0 h-[250px] w-screen backdrop-blur-lg absolute top-0 z-10`}
+        } sm:hidden sm:gap-5 sm:list-none bg-white bg-opacity-60 p-4 absolute top-0 right-0 h-[250px] w-screen backdrop-blur-lg z-10`}
       >
         <li className="flex justify-end">
           <button
@@ -109,7 +114,7 @@ const Navbar = () => {
         </li>
         <div className="flex flex-col justify-center gap-5">
           <li>
-            <Link href="/" className="text-base font-normal text-black">
+            <Link href="/" className="text-base font-normal text-black ">
               Home
             </Link>
           </li>

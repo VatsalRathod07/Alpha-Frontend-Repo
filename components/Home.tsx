@@ -1,8 +1,13 @@
+"use client";
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
 
 const Home = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <section className="relative">
       <div className="home_content flex flex-col gap-10">
@@ -14,10 +19,16 @@ const Home = () => {
           />
           <div className="home_overlay absolute inset-0 bg-gradient-to-b from-secondary opacity-40 to-black"></div>
           <div className="home_text absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center flex flex-col gap-5 items-center">
-            <p className="home_description w-[300px] text-lg font-normal font-signature uppercase text-white [word-spacing:2px]">
+            <p
+              className="home_description w-[300px] text-lg font-normal font-signature uppercase text-white [word-spacing:2px]"
+              data-aos="fade-left"
+            >
               Welcome To The Alpha Store
             </p>
-            <p className="text-white font-signature text-4xl sm:text-6xl font-normal sm:leading-[60px] w-[350px] sm:w-[700px]">
+            <p
+              className="text-white font-signature text-4xl sm:text-6xl font-normal sm:leading-[60px] w-[350px] sm:w-[700px]"
+              data-aos="fade-right"
+            >
               Nature’s Bounty, perfected in every grain.
             </p>
 

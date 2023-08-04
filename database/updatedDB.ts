@@ -1,3 +1,5 @@
+import Image1 from "../public/img/image1.png"
+
 const companies = [
   {
     id: 1001,
@@ -164,7 +166,7 @@ enum ProductType {
 
 interface ProductMediaType {
   type: "video" | "image";
-  url: string;
+  url: any;
 }
 
 interface Product {
@@ -177,6 +179,7 @@ interface Product {
   rating: number;
   companyId: number;
   media: ProductMediaType[];
+  price: string;
 }
 
 export const newProducts: Product[] = [
@@ -188,27 +191,28 @@ export const newProducts: Product[] = [
     rank: 1,
     sellCount: 22,
     rating: 4.5,
+    price: "15,000",
     companyId: 1001,
     media: [
       {
         type: "image",
-        url: "http://www.google.com/",
+        url: Image1,
       },
       {
         type: "video",
-        url: "http://www.google.com/",
+        url: "../public/img/10.jpeg",
       },
       {
         type: "video",
-        url: "https://www.youtube.com/watch?v=_zvzWG9tKzI",
+        url: "../public/img/12.jpeg",
       },
       {
         type: "image",
-        url: "http://www.google.com/",
+        url: "../public/img/11.jpeg",
       },
       {
         type: "image",
-        url: "http://www.google.com/",
+        url: "../public/img/17.jpeg",
       },
     ],
   },
@@ -216,6 +220,7 @@ export const newProducts: Product[] = [
     id: 3002,
     type: ProductType.Aatamaker,
     categoryId: 2001,
+    price: "10,000",
     name: "Rose Gold and silver combinations",
     rank: 2,
     sellCount: 11,
@@ -224,7 +229,7 @@ export const newProducts: Product[] = [
     media: [
       {
         type: "image",
-        url: "http://www.google.com/",
+        url: "../public/img/19.jpeg",
       },
     ],
   },
@@ -236,11 +241,12 @@ export const newProducts: Product[] = [
     rank: 2,
     sellCount: 11,
     rating: 4.5,
+    price: "11,500",
     companyId: 1001,
     media: [
       {
         type: "video",
-        url: "http://www.google.com/",
+        url: "../public/img/8.jpeg",
       },
     ],
   },
@@ -251,12 +257,13 @@ export const newProducts: Product[] = [
     name: "Product 3003",
     rank: 2,
     sellCount: 11,
+    price: "8,000",
     rating: 4.5,
     companyId: 1001,
     media: [
       {
         type: "image",
-        url: "http://www.google.com/",
+        url: "../public/img/9.jpeg",
       },
     ],
   },
@@ -267,12 +274,47 @@ export const newProducts: Product[] = [
     name: "Product 3005",
     rank: 3,
     sellCount: 6,
+    price: "14,500",
     rating: 5,
     companyId: 1001,
     media: [
       {
         type: "image",
-        url: "http://www.google.com/",
+        url: "../public/img/14.jpeg",
+      },
+    ],
+  },
+  {
+    id: 3006,
+    type: ProductType.Aatamaker,
+    categoryId: 2003,
+    name: "Product 306",
+    rank: 3,
+    sellCount: 6,
+    rating: 5,
+    price: "9,500",
+    companyId: 1001,
+    media: [
+      {
+        type: "image",
+        url: "../public/img/11.jpeg",
+      },
+    ],
+  },
+  {
+    id: 3007,
+    type: ProductType.Aatamaker,
+    categoryId: 2003,
+    name: "Product 3007",
+    rank: 3,
+    sellCount: 6,
+    price: "10,000",
+    rating: 3.2,
+    companyId: 1001,
+    media: [
+      {
+        type: "image",
+        url: "../public/img/14.jpeg",
       },
     ],
   },

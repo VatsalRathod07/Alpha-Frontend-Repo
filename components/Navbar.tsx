@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { HiMenu } from "react-icons/hi";
 import { GrFormClose } from "react-icons/gr";
 import { useRouter, usePathname } from "next/navigation";
-import NavbarLogo from '../public/img/logo.png'
+import NavLogo from "../public/img/nav-logo.png";
 
 const Navbar = () => {
   const router = useRouter();
@@ -55,9 +55,9 @@ const Navbar = () => {
           className="navbar_logo text-3xl font-medium text-secondary font-signature tracking-[.5px]"
         >
           <img
-            className="h-16 w-32 object-cover"
-            src='../public/img/navlogo.png'
-            alt="icon"
+            className="h-16 w-32 object-contain"
+            src={NavLogo as any}
+            alt="NavLogo"
           />
         </Link>
         <div className="flex justify-between gap-5 list-none sm:hidden">

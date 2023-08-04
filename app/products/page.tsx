@@ -1,28 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useState, useEffect, useMemo } from "react";
-import { AiFillStar, } from "react-icons/ai";
-import { products as sortedProducts } from "@/components/ProductsCard";
+import { AiFillStar } from "react-icons/ai";
 import Link from "next/link";
-import Pagination from "@/components/Pagination";
 import { categories } from "@/database/updatedDB";
-import { useParams, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { newProducts } from "../../database/updatedDB";
 
 const ProductDetails = () => {
-  const [sortingOption, setSortingOption] = useState("");
-
-  const handleSortingChange = (event: {
-    target: { value: React.SetStateAction<string> };
-  }) => {
-    setSortingOption(event.target.value);
-  };
-
-  const pageSize = 6;
-  const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCatgory] = useState<any>(null);
-  const indexOfLastProduct = currentPage * pageSize;
-  const indexOfFirstProduct = indexOfLastProduct - pageSize;
+
   const search: any = useSearchParams();
   const category = search.get("category");
 
@@ -50,7 +37,6 @@ const ProductDetails = () => {
       setSelectedCatgory(id);
     }
   };
-
   return (
     <div className="flex w-full">
       <div className="w-[25%] border-t-2 border-r-2 border-solid border-[#E4E7E7]">
@@ -111,7 +97,7 @@ const ProductDetails = () => {
                           ₹ {product.price}
                         </p>
                         <div className="flex items-center gap-1">
-                          <AiFillStar className="text-yellow-300"/>
+                          <AiFillStar className="text-yellow-300" />
                           <p>4.5</p>
                         </div>
                       </div>

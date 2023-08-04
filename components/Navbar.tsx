@@ -3,10 +3,11 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { HiMenu } from "react-icons/hi";
 import { GrFormClose } from "react-icons/gr";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 const Navbar = () => {
   const router = useRouter();
+  const browserPathName = usePathname();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isNavbarScroll, setIsNavbarScroll] = useState(false);
 
@@ -72,22 +73,50 @@ const Navbar = () => {
           }`}
         >
           <li>
-            <Link href="/" className={`${linkStyle}`}>
+            <Link
+              href="/"
+              className={` ${
+                browserPathName === "/" ? "text-light-purple font-semibold" : ""
+              } ${linkStyle} `}
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link href="/products" className={`${linkStyle}`}>
+            <Link
+              href="/products"
+              className={`${
+                browserPathName === "/products"
+                  ? "text-light-purple font-semibold"
+                  : ""
+              }  ${linkStyle}  `}
+            >
               Products
             </Link>
           </li>
           <li>
-            <Link href="/about" className={`${linkStyle}`}>
+            <Link
+              href="/about"
+              className={` ${
+                browserPathName === "/about"
+                  ? "text-light-purple font-semibold"
+                  : ""
+              } ${linkStyle} `}
+            >
               About
             </Link>
           </li>
           <li>
-            <Link href="/contact" className={`${linkStyle}`}>
+            <Link
+              href="/contact"
+              className={`${
+                browserPathName === "/contact"
+                  ? "text-light-purple font-semibold"
+                  : ""
+              } ${linkStyle}
+             
+            `}
+            >
               Contact
             </Link>
           </li>

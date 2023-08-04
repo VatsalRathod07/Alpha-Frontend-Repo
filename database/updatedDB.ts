@@ -1,4 +1,24 @@
 import Image1 from "../public/img/image1.png"
+import Image2 from "../public/img/2.jpeg"
+import Image3 from "../public/img/3.jpeg"
+import Image4 from "../public/img/4.jpeg"
+import Image5 from "../public/img/5.jpeg"
+import Image6 from "../public/img/6.jpeg"
+import Image7 from "../public/img/7.jpeg"
+import Image8 from "../public/img/8.jpeg"
+import Image9 from "../public/img/9.jpeg"
+import Image10 from "../public/img/10.jpeg"
+import Image11 from "../public/img/11.jpeg"
+import Image12 from "../public/img/12.jpeg"
+import Image13 from "../public/img/13.jpeg"
+import Image14 from "../public/img/14.jpeg"
+import Image15 from "../public/img/15.jpeg"
+import Image16 from "../public/img/16.jpeg"
+import Image17 from "../public/img/17.jpeg"
+import Image18 from "../public/img/18.jpeg"
+import Image19 from "../public/img/19.jpeg"
+
+
 
 const companies = [
   {
@@ -200,19 +220,19 @@ export const newProducts: Product[] = [
       },
       {
         type: "video",
-        url: "../public/img/10.jpeg",
+        url: Image10,
       },
       {
         type: "video",
-        url: "../public/img/12.jpeg",
+        url: Image12,
       },
       {
         type: "image",
-        url: "../public/img/11.jpeg",
+        url: Image11,
       },
       {
         type: "image",
-        url: "../public/img/17.jpeg",
+        url: Image17,
       },
     ],
   },
@@ -229,7 +249,7 @@ export const newProducts: Product[] = [
     media: [
       {
         type: "image",
-        url: "../public/img/19.jpeg",
+        url: Image19,
       },
     ],
   },
@@ -246,7 +266,7 @@ export const newProducts: Product[] = [
     media: [
       {
         type: "video",
-        url: "../public/img/8.jpeg",
+        url: Image8,
       },
     ],
   },
@@ -263,7 +283,7 @@ export const newProducts: Product[] = [
     media: [
       {
         type: "image",
-        url: "../public/img/9.jpeg",
+        url: Image9,
       },
     ],
   },
@@ -280,7 +300,7 @@ export const newProducts: Product[] = [
     media: [
       {
         type: "image",
-        url: "../public/img/14.jpeg",
+        url: Image2,
       },
     ],
   },
@@ -297,7 +317,7 @@ export const newProducts: Product[] = [
     media: [
       {
         type: "image",
-        url: "../public/img/11.jpeg",
+        url: Image11,
       },
     ],
   },
@@ -314,7 +334,92 @@ export const newProducts: Product[] = [
     media: [
       {
         type: "image",
-        url: "../public/img/14.jpeg",
+        url: Image14,
+      },
+    ],
+  },
+  {
+    id: 3008,
+    type: ProductType.Aatamaker,
+    categoryId: 2004,
+    name: "Product 3008",
+    rank: 3,
+    sellCount: 6,
+    price: "10,000",
+    rating: 3.2,
+    companyId: 1001,
+    media: [
+      {
+        type: "image",
+        url: Image3,
+      },
+    ],
+  },
+  {
+    id: 3009,
+    type: ProductType.Aatamaker,
+    categoryId: 2004,
+    name: "Product 3009",
+    rank: 3,
+    sellCount: 6,
+    price: "10,000",
+    rating: 3.2,
+    companyId: 1001,
+    media: [
+      {
+        type: "image",
+        url: Image4,
+      },
+    ],
+  },
+  {
+    id: 3010,
+    type: ProductType.Aatamaker,
+    categoryId: 2004,
+    name: "Product 3010",
+    rank: 3,
+    sellCount: 6,
+    price: "10,000",
+    rating: 3.2,
+    companyId: 1001,
+    media: [
+      {
+        type: "image",
+        url: Image5,
+      },
+    ],
+  },
+  {
+    id: 3011,
+    type: ProductType.Aatamaker,
+    categoryId: 2005,
+    name: "Product 3011",
+    rank: 3,
+    sellCount: 6,
+    price: "10,000",
+    rating: 3.2,
+    companyId: 1001,
+    media: [
+      {
+        type: "image",
+        url: Image6,
+      },
+    ],
+  },
+  {
+    id: 3012,
+    type: ProductType.Aatamaker,
+    categoryId: 2005,
+    name: "Product 3012",
+    rank: 3,
+    sellCount: 6,
+    price: "10,000",
+    rating: 3.2,
+    companyId: 1001,
+    media: [
+      {
+        type: "image",
+        url: Image7,
       },
     ],
   },

@@ -39,9 +39,17 @@ const ProductDetails = () => {
       );
       return data;
     } else {
-      return;
+      return newProducts;
     }
   }, [selectedCategory]);
+
+  const onHandleChange = (isChecked: boolean, id: number) => {
+    if (isChecked) {
+      setSelectedCatgory(null);
+    } else {
+      setSelectedCatgory(id);
+    }
+  };
 
   return (
     <div className="flex w-full">
@@ -59,9 +67,7 @@ const ProductDetails = () => {
                     type="checkbox"
                     checked={isChecked}
                     className="h-5 w-5 cursor-pointer"
-                    onChange={() => {
-                      setSelectedCatgory(data.id);
-                    }}
+                    onChange={() => onHandleChange(isChecked, data.id)}
                   />
                   <div className="text-start ml-4 font-medium text-lg">
                     {data.name}
@@ -78,25 +84,6 @@ const ProductDetails = () => {
             <h4 className="font-semibold text-lg text-primary">
               Our Latest Product
             </h4>
-
-            <div className="">
-              {/* <select
-                name="sort-products"
-                id="sort-products"
-                className="bg-transparent focus:outline-none overflow-hidden text-sm"
-                value={sortingOption}
-                onChange={handleSortingChange}
-              >
-                <option value="" className="text-primary">
-                  Default sorting
-                </option>
-                <option value="popularity">Sort by popularity</option>
-                <option value="rating">Sort by average rating</option>
-                <option value="latest">Sort by latest</option>
-                <option value="lowToHigh">Sort by price: low to high</option>
-                <option value="highToLow">Sort by price: high to low</option>
-              </select> */}
-            </div>
           </div>
           <div className="grid justify-items-center grid-cols-2 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-5 justify-center">
             {(filteredProducts || []).map((product: any) => {

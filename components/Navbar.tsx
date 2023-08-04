@@ -93,7 +93,8 @@ const Navbar = () => {
           </li>
         </ul>
         <button
-          className="px-6 py-3 font-medium hover:shadow-xl bg-light-purple border-solid border-2 rounded-md transition ease-in-out duration-300 text-white"
+          className="px-6 py-3 font-medium hover:shadow-xl bg-light-purple border-solid border-2 transition ease-in-out duration-300 text-white"
+          style={{ borderRadius: "29px 0px 29px 0px" }}
           onClick={() => router.push("/about")}
         >
           Get Started

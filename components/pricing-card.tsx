@@ -8,15 +8,18 @@ interface categories {
 }
 const PricingCard = ({ name, price, features, onClick }: categories) => {
   return (
-    <div className="flex items-center cursor-pointer" onClick={onClick}>
+    <div
+      className="flex items-center cursor-pointer hover:-translate-y-1 hover:scale-105 transition duration-300 transform"
+      onClick={onClick}
+    >
       <div
         className=" shadow-2xl hover:bg-[#402E86] hover:text-white transition duration-300 ease-in-out rounded-lg hover:shadow-3xl p-6 max-w-sm w-full"
         style={{ background: "linear-gradient(45deg,#ffbc00,#ff0058)" }}
       >
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9VQEBjCgG4pvYgf01DF84YNSb2N2biill7Q&usqp=CAU"
+          src="https://5.imimg.com/data5/SELLER/Default/2023/6/315338395/RD/QN/UV/4100636/14-inch-regular-flour-mill.jpg"
           alt="Product Image"
-          className="w-full h-36 mx-auto rounded-md mb-4 object-cover"
+          className="w-40 h-36 mx-auto rounded-md mb-4 object-cover"
         />
         <h2 className="text-3xl font-semibold mb-4">{name}</h2>
         <div className="border-b-2 border-gray-200 mb-4"></div>
@@ -30,7 +33,7 @@ const PricingCard = ({ name, price, features, onClick }: categories) => {
         })}
         <a
           href="#"
-          className="block bg-[#E8E2FD] hover:bg-[#907BEA] font-medium transition duration-300 ease-in-out px-4 py-2 mt-6 rounded-lg text-center"
+          className="block bg-[#E8E2FD] hover:bg-[#907BEA] font-medium transition duration-300 px-4 py-2 mt-6 rounded-lg text-center"
         >
           Shop Now
         </a>

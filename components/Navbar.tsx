@@ -76,7 +76,9 @@ const Navbar = () => {
             <Link
               href="/"
               className={` ${
-                browserPathName === "/" ? "text-light-purple font-semibold" : ""
+                browserPathName === "/"
+                  ? "!text-light-purple font-semibold"
+                  : ""
               } ${linkStyle} `}
             >
               Home
@@ -87,7 +89,7 @@ const Navbar = () => {
               href="/products"
               className={`${
                 browserPathName === "/products"
-                  ? "text-light-purple font-semibold"
+                  ? "!text-light-purple font-semibold"
                   : ""
               }  ${linkStyle}  `}
             >
@@ -97,9 +99,9 @@ const Navbar = () => {
           <li>
             <Link
               href="/about"
-              className={` ${
+              className={`${
                 browserPathName === "/about"
-                  ? "text-light-purple font-semibold"
+                  ? "!text-light-purple font-semibold"
                   : ""
               } ${linkStyle} `}
             >
@@ -111,7 +113,7 @@ const Navbar = () => {
               href="/contact"
               className={`${
                 browserPathName === "/contact"
-                  ? "text-light-purple font-semibold"
+                  ? "!text-light-purple font-semibold"
                   : ""
               } ${linkStyle}
              

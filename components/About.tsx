@@ -2,14 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <section
-      style={{
-        backgroundImage:
-          "url(https://tech-utsav-aiet.vercel.app/static/media/events_bg.9c3db51e672c4010f0df.svg)",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-      }}
-    >
+    <section>
       <div className="flex flex-col sm:flex-row justify-between items-center pt-[60px] pb-[60px] pl-[20px] pr-[20px] gap-5">
         <div className="flex flex-col gap-5">
           <p className="max-w-[550px] font-signature text-justify text-base font-normal">

@@ -14,7 +14,7 @@ const PricingCard = ({ name, price, features, onClick }: categories) => {
     >
       <div
         className=" shadow-2xl min-w-[350px] transition duration-300 ease-in-out rounded-lg hover:shadow-3xl p-6 w-full sm:w-[300px]"
-        style={{ background: "linear-gradient(45deg,#f9f9f9,#f1f1f1)" }}
+        style={{ backgroundImage: "none", opacity: "1 !important" }}
       >
         <img
           src="https://5.imimg.com/data5/SELLER/Default/2023/6/315338395/RD/QN/UV/4100636/14-inch-regular-flour-mill.jpg"

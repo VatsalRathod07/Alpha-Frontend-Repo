@@ -8,8 +8,17 @@ const Page = () => {
   return (
     <>
       <Home />
-      <PricingSection />
-      <About />
+      <div
+        style={{
+          backgroundImage:
+            "url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/b1cd8fb3b06f582495fdc897/-min.jpg)",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
+        <PricingSection />
+        <About />
+      </div>
     </>
   );
 };

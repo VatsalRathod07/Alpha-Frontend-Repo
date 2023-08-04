@@ -13,14 +13,7 @@ const PricingSection = () => {
   }, []);
 
   return (
-    <div className=""
-      style={{
-        backgroundImage:
-          "url(https://tech-utsav-aiet.vercel.app/static/media/events_bg.9c3db51e672c4010f0df.svg)",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-      }}
-    >
+    <div>
       <div className="flex flex-col sm:flex-row justify-center gap-5 sm:gap-10 pt-6">
         {categories.slice(0, 3).map((data) => {
           return (

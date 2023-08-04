@@ -1,5 +1,5 @@
 import React from "react";
-import { AiOutlineStar } from "react-icons/ai";
+import { AiFillStar } from "react-icons/ai";
 import Link from "next/link";
 
 export const products = [
@@ -348,7 +348,7 @@ export const products = [
 
 const ProductsCard = () => {
   return (
-    <div className="products-grid grid justify-items-center grid-cols-2 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 sm gap-5 justify-center">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       {products
         .filter((data) => data.id <= 6)
         .map((product) => (
@@ -357,25 +357,23 @@ const ProductsCard = () => {
             key={product.name}
             className="product-link"
           >
-            <div className="product-card cursor-pointer">
-              <div>
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="product-img w-full object-cover"
-                />
-              </div>
-              <div className="product-details py-1 flex flex-col gap-[2px]">
-                <div className="flex gap-[1px] text-primary text-sm">
-                  <AiOutlineStar />
-                  <AiOutlineStar />
-                  <AiOutlineStar />
-                  <AiOutlineStar />
+            <div className="product-card cursor-pointer bg-white rounded-lg shadow-md">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-full object-cover rounded-t-lg" 
+              />
+              <div className="px-4 py-2">
+                <div className="flex gap-[1px] text-yellow-300 text-sm">
+                  <AiFillStar />
+                  <AiFillStar />
+                  <AiFillStar />
+                  <AiFillStar />
                 </div>
-                <p className="product-name font-signature text-secondary font-normal text-base">
+                <p className="font-signature text-secondary text-lg capitalize">
                   {product.name}
                 </p>
-                <p className="product-price text-sm text-primary font-bold">
+                <p className="text-primary font-bold text-sm">
                   {product.price}
                 </p>
               </div>
@@ -383,6 +381,7 @@ const ProductsCard = () => {
           </Link>
         ))}
     </div>
+
   );
 };
 

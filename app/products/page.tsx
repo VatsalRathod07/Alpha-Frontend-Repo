@@ -52,7 +52,7 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="flex w-full">
+    <div className="flex w-full h-screen">
       <div className="w-[25%] border-t-2 border-r-2 border-solid border-[#E4E7E7]">
         <div className="mt-32 ml-[72px]">
           <div className="font-medium text-xl text-manual-gray">
@@ -78,7 +78,7 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
-      <section className="w-[75%] products pt-5 pb-5 sm:pb-12 px-2 sm:px-5 bg-light">
+      <section className="w-[75%] products py-10 sm:py-5 px-2 sm:px-5 bg-light">
         <div className="container flex flex-col gap-[30px] py-5 px-8 bg-white">
           <div className="flex flex-col gap-3 sm:gap-0 sm:flex-row justify-between items-center">
             <h4 className="font-semibold text-lg text-primary">

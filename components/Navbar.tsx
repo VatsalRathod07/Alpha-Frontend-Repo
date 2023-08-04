@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { HiMenu } from "react-icons/hi";
 import { GrFormClose } from "react-icons/gr";
 import { useRouter, usePathname } from "next/navigation";
+import NavbarLogo from '../public/img/logo.png'
 
 const Navbar = () => {
   const router = useRouter();
@@ -43,7 +44,7 @@ const Navbar = () => {
     "text-base font-medium text-secondary hover:text-light-purple hover:font-semibold";
   return (
     <nav
-      className={`p-3 py-5 z-10 w-full bg-white text-secondary sticky ${
+      className={`p-3 py-2 z-10 w-full bg-white text-secondary sticky ${
         isSidebarOpen ? "sm:bg-white" : "sm:bg-white"
       } 
       ${isNavbarScroll ? "top-[-100]" : "top-0 shadow-lg"}`}
@@ -54,8 +55,8 @@ const Navbar = () => {
           className="navbar_logo text-3xl font-medium text-secondary font-signature tracking-[.5px]"
         >
           <img
-            className="h-10 w-16 object-cover"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSxdTKeLmDM7ezeuP_Q0lj2NlFsGy5_2aiAw&usqp=CAU"
+            className="h-16 w-32 object-cover"
+            src='../public/img/navlogo.png'
             alt="icon"
           />
         </Link>
@@ -124,7 +125,7 @@ const Navbar = () => {
           </li>
         </ul>
         <button
-          className="px-6 py-3 font-medium hover:shadow-xl bg-light-purple border-solid border-2 transition ease-in-out duration-300 text-white"
+          className="px-6 py-3 font-medium hover:shadow-xl hidden sm:block bg-light-purple border-solid border-2 transition ease-in-out duration-300 text-white"
           style={{ borderRadius: "29px 0px 29px 0px" }}
           onClick={() => router.push("/about")}
         >

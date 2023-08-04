@@ -67,7 +67,7 @@ export const categories: Category[] = [
   {
     id: 2001,
     rank: 5,
-    name: "Reguler",
+    name: "Regular",
     material: "",
     price: {
       value: "10,500",

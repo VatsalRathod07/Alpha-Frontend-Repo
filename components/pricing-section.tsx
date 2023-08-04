@@ -13,7 +13,7 @@ const PricingSection = () => {
   }, []);
 
   return (
-    <div
+    <div className=""
       style={{
         backgroundImage:
           "url(https://tech-utsav-aiet.vercel.app/static/media/events_bg.9c3db51e672c4010f0df.svg)",
@@ -21,7 +21,7 @@ const PricingSection = () => {
         backgroundSize: "cover",
       }}
     >
-      <div className="flex justify-center gap-10 p-6">
+      <div className="flex flex-col sm:flex-row justify-center gap-5 sm:gap-10 p-6">
         {categories.slice(0, 3).map((data) => {
           return (
             <div key={data?.id} data-aos="flip-right">
@@ -35,7 +35,7 @@ const PricingSection = () => {
           );
         })}
       </div>
-      <div className="flex justify-center gap-5">
+      <div className="flex flex-col sm:flex-row justify-center gap-5 sm:gap-10 p-6">
         {categories.slice(3, 5).map((data) => {
           return (
             <div key={data?.id} data-aos="flip-right">

@@ -21,7 +21,7 @@ const PricingSection = () => {
         backgroundSize: "cover",
       }}
     >
-      <div className="flex flex-col sm:flex-row justify-center gap-5 sm:gap-10 p-6">
+      <div className="flex flex-col sm:flex-row justify-center gap-5 sm:gap-10 pt-6">
         {categories.slice(0, 3).map((data) => {
           return (
             <div key={data?.id} data-aos="flip-right">

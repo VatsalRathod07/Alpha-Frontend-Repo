@@ -357,7 +357,7 @@ const ProductsCard = () => {
             key={product.name}
             className="product-link"
           >
-            <div className="product-card cursor-pointer bg-white rounded-lg shadow-md">
+            <div className="">
               <img
                 src={product.image}
                 alt={product.name}

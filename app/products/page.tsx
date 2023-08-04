@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useState, useEffect, useMemo } from "react";
-import { AiOutlineStar } from "react-icons/ai";
+import { AiFillStar, } from "react-icons/ai";
 import { products as sortedProducts } from "@/components/ProductsCard";
 import Link from "next/link";
 import Pagination from "@/components/Pagination";
@@ -52,7 +52,7 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="flex w-full h-screen">
+    <div className="flex w-full">
       <div className="w-[25%] border-t-2 border-r-2 border-solid border-[#E4E7E7]">
         <div className="mt-32 ml-[72px]">
           <div className="font-medium text-xl text-manual-gray">
@@ -85,7 +85,7 @@ const ProductDetails = () => {
               Our Latest Product
             </h4>
           </div>
-          <div className="grid justify-items-center grid-cols-2 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-5 justify-center">
+          <div className="grid justify-items-center grid-cols-2 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-6 justify-center">
             {(filteredProducts || []).map((product: any) => {
               console.log(product, "product");
               return (
@@ -94,27 +94,27 @@ const ProductDetails = () => {
                   key={product.id}
                   className="product-link"
                 >
-                  <div className="product-card cursor-pointer">
+                  <div className="product-card cursor-pointer border-gray border-2 rounded-lg hover:scale-105">
                     <div>
                       <img
                         src={product?.media[0]?.url?.src}
                         alt={product.name}
-                        className="product-img w-full object-cover"
+                        className="w-full  rounded-t-md"
                       />
                     </div>
-                    <div className="product-details py-1 flex flex-col gap-[2px]">
-                      <div className="flex gap-[1px] text-primary text-sm">
-                        <AiOutlineStar />
-                        <AiOutlineStar />
-                        <AiOutlineStar />
-                        <AiOutlineStar />
-                      </div>
+                    <div className="product-details py-1 flex flex-col gap-[2px] p-2">
                       <p className="product-name font-signature text-secondary font-normal text-base">
                         {product.name}
                       </p>
-                      <p className="product-price text-sm text-primary font-bold">
-                        {product.price}
-                      </p>
+                      <div className="flex justify-between items-center gap-[1px] text-primary text-sm mt-2">
+                        <p className="product-price text-sm text-primary font-bold">
+                          ₹ {product.price}
+                        </p>
+                        <div className="flex items-center gap-1">
+                          <AiFillStar className="text-yellow-300"/>
+                          <p>4.5</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </Link>

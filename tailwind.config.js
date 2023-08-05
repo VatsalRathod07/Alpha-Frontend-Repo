@@ -29,6 +29,8 @@ module.exports = {
         "light-gray": "#DDDDDD",
         "manual-gray": "#646467",
         "light-purple": "#362596",
+        "dark-blue": "#294363",
+        "light-blue": "#f4f8fc",
       },
     },
   },

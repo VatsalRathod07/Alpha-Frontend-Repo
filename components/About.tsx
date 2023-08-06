@@ -12,12 +12,12 @@ const About = () => {
     Aos.init({ duration: 2000 });
   }, []);
   return (
-    <div className="flex w-full px-12 py-10 gap-10 max-w-[1440px]">
+    <div className="flex w-full flex-col-reverse md:flex-row px-12 py-10 gap-10 max-w-[1440px]">
       <div
-        className="left-side w-[50%] bg-white shadow-2xl px-16 py-16 rounded-xl"
+        className="left-side w-full md:w-[50%] bg-white shadow-2xl px-6 md:px-16 py-16 rounded-xl"
         data-aos="flip-right"
       >
-        <div className="text-[36px] text-dark-blue font-semibold ">
+        <div className="text-[24px] md:text-[30px] lg:text-[36px] text-dark-blue font-semibold ">
           About Alpha Atta Maker
         </div>
         <div
@@ -31,7 +31,10 @@ const About = () => {
           flour milling needs.
         </div>
         <div className="flex flex-col gap-5 pt-5">
-          <div className="flex gap-5 items-center" data-aos="fade-up">
+          <div
+            className="flex flex-col md:flex-row gap-5 items-center"
+            data-aos="fade-up"
+          >
             <Image
               className="h-16 w-16 object-contain"
               src={Icon1}
@@ -44,7 +47,10 @@ const About = () => {
               we offer a range of options to suit diverse needs.
             </div>
           </div>
-          <div className="flex gap-5 items-center" data-aos="fade-up">
+          <div
+            className="flex flex-col md:flex-row gap-5 items-center"
+            data-aos="fade-up"
+          >
             <Image
               className="h-16 w-16 object-contain"
               src={Icon2}
@@ -57,7 +63,10 @@ const About = () => {
               understand the nuances of the process.
             </div>
           </div>
-          <div className="flex gap-5 items-center" data-aos="fade-up">
+          <div
+            className="flex flex-col md:flex-row items-center"
+            data-aos="fade-up"
+          >
             <Image
               className="h-16 w-16 object-contain"
               src={Icon3}
@@ -72,7 +81,7 @@ const About = () => {
         </div>
       </div>
       <div
-        className="right-side w-[50%] flex items-center justify-center bg-white opacity-80 rounded-xl"
+        className="right-side w-full md:w-[50%] flex items-center justify-center bg-white opacity-80 rounded-xl"
         data-aos="flip-left"
       >
         <Image alt="Image" className="" src={NavLogo} />

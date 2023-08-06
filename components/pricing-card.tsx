@@ -15,7 +15,7 @@ const PricingCard = ({ name, price, features, onClick }: categories) => {
       <div
         className=" shadow-2xl min-w-[350px] transition duration-300 ease-in-out rounded-lg hover:shadow-3xl p-6 w-full sm:w-[300px]"
         style={{
-          opacity: "0.8 !important",
+          background: "1 !important",
           backgroundColor: "white !important",
         }}
       >

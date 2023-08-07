@@ -361,7 +361,7 @@ const ProductsCard = () => {
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-full object-cover rounded-t-lg" 
+                className="w-full h-full object-cover" 
               />
               <div className="px-4 py-2">
                 <div className="flex gap-[1px] text-yellow-300 text-sm">

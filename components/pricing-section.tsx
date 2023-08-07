@@ -14,22 +14,8 @@ const PricingSection = () => {
 
   return (
     <div>
-      <div className="flex flex-col sm:flex-row justify-center gap-5 sm:gap-10 pt-6">
-        {categories.slice(0, 3).map((data) => {
-          return (
-            <div key={data?.id} data-aos="flip-right">
-              <Card
-                name={data.name}
-                price={data.price.value}
-                features={data.features}
-                onClick={() => router.push(`/products?category=${data.id}`)}
-              />
-            </div>
-          );
-        })}
-      </div>
-      <div className="flex flex-col sm:flex-row justify-center gap-5 sm:gap-10 p-6">
-        {categories.slice(3, 5).map((data) => {
+      <div className="flex flex-wrap justify-center gap-5 sm:gap-10 pt-6">
+        {categories.map((data) => {
           return (
             <div key={data?.id} data-aos="flip-right">
               <Card

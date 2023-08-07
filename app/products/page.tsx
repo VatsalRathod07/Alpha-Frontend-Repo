@@ -6,16 +6,18 @@ import Link from "next/link";
 import { categories } from "@/database/updatedDB";
 import { useSearchParams } from "next/navigation";
 import { newProducts } from "../../database/updatedDB";
+import { FiFilter } from "react-icons/fi";
 
 const ProductDetails = () => {
-  const [selectedCategory, setSelectedCatgory] = useState<any>(null);
+  const [selectedCategory, setSelectedCategory] = useState<any>(null);
+  const [showFilterOptions, setShowFilterOptions] = useState(false); // State to track filter options visibility
 
   const search: any = useSearchParams();
   const category = search.get("category");
 
   useEffect(() => {
     if (category) {
-      setSelectedCatgory(Number(category));
+      setSelectedCategory(Number(category));
     }
   }, [category]);
 
@@ -31,18 +33,28 @@ const ProductDetails = () => {
   }, [selectedCategory]);
 
   const onHandleChange = (isChecked: boolean, id: number) => {
-    window.scrollTo({top: 0, behavior: "smooth"})
+    window.scrollTo({ top: 0, behavior: "smooth" });
     if (isChecked) {
-      setSelectedCatgory(null);
+      setSelectedCategory(null);
     } else {
-      setSelectedCatgory(id);
+      setSelectedCategory(id);
+    }
+    if (showFilterOptions) {
+      setShowFilterOptions(false)
     }
   };
+
+  const toggleFilterOptions = () => {
+    setShowFilterOptions(!showFilterOptions);
+  };
+
   return (
     <div className="flex w-full">
       <section className="products py-10 sm:py-5 px-2 sm:px-5 bg-light flex gap-5 sm:flex-row flex-col">
 
-        <div className="w-full md:w-[30%] h-[300px] bg-white py-10  md:sticky md:top-4">
+
+        {/* Sidebar with filter options */}
+        <div className="w-full md:w-[30%] h-[300px] bg-white py-10 md:sticky md:top-4 hidden lg:block">
           <div className="ml-[40px]">
             <div className="font-medium text-xl text-manual-gray">
               Filter By Categories
@@ -68,7 +80,8 @@ const ProductDetails = () => {
           </div>
         </div>
 
-        <div className="container flex flex-col gap-[30px] py-5 px-8 bg-white">
+        <div className="container flex flex-col gap-[30px] py-5 px-4 sm:px-8  bg-white relative">
+
           <div className="flex flex-col gap-3 sm:gap-0 sm:flex-row justify-between items-center">
             <h4 className="font-semibold text-lg text-primary">
               Our Latest Product
@@ -83,16 +96,16 @@ const ProductDetails = () => {
                   key={product.id}
                   className="product-link"
                 >
-                  <div className="product-card cursor-pointer border-gray border-2 rounded-lg hover:scale-105">
+                  <div className="product-card cursor-pointer hover:scale-105">
                     <div>
                       <img
                         src={product?.media[0]?.url?.src}
                         alt={product.name}
-                        className="w-full  rounded-t-md"
+                        className="w-full "
                       />
                     </div>
                     <div className="product-details py-1 flex flex-col gap-[2px] p-2">
-                      <p className="product-name font-signature text-secondary font-normal text-base">
+                      <p className="product-name font-signature text-secondary font-normal text-base min-h-[50px]">
                         {product.name}
                       </p>
                       <div className="flex justify-between items-center gap-[1px] text-primary text-sm mt-2">
@@ -110,6 +123,33 @@ const ProductDetails = () => {
               );
             })}
           </div>
+
+          {showFilterOptions && (
+            <div className="rounded-md border-[.5px_whitesmoke] h-10 py-4 px-6 flex justify-center items-center lg:hidden right-0 fixed">
+              <div className="flex bg-white flex-col gap-2 mt-44 h-[calc(100vh - 500px)] px-10 py-10 rounded-md">
+                {categories.map((data) => (
+                  <div className="flex items-center" key={data.id}>
+                    <input
+                      type="checkbox"
+                      checked={selectedCategory === data.id}
+                      className="h-5 w-5 cursor-pointer"
+                      onChange={() => onHandleChange(selectedCategory === data.id, data.id)}
+                    />
+                    <div className="text-start ml-4 font-medium text-lg">
+                      {data.name}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {!showFilterOptions &&
+            <div className="bg-white rounded-md border-[.5px_#e7e7e7] h-10 py-4 px-6 flex justify-center items-center lg:hidden right-0 fixed">
+              <FiFilter size={30} onClick={toggleFilterOptions} />
+              <span className="text-lg font-medium ">Filters</span>
+            </div>
+          }
         </div>
       </section>
     </div>

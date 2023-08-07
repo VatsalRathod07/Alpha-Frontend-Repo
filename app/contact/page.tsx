@@ -23,37 +23,36 @@ const Contact = () => {
             type="text"
             name="name"
             placeholder="Name"
-            className="border-0 rounded outline-0 h-[60px] w-full bg-[#f4f8fc] pl-4"
+            className="border-0 rounded outline-0 h-[60px] w-full bg-light-skyblue pl-4"
           />
           <input
             type="text"
             name="email"
             placeholder="Email"
-            className="border-0 rounded outline-0 h-[60px] w-full bg-[#f4f8fc] pl-4"
+            className="border-0 rounded outline-0 h-[60px] w-full bg-light-skyblue pl-4"
           />
 
           <input
             type="text"
             name="phone"
             placeholder="Phone"
-            className="border-0 rounded outline-0 h-[60px] w-full bg-[#f4f8fc] pl-4"
+            className="border-0 rounded outline-0 h-[60px] w-full bg-light-skyblue pl-4"
           />
           <input
             type="text"
             name="subject"
             placeholder="Subject"
-            className="border-0 rounded outline-0 h-[60px] w-full bg-[#f4f8fc] pl-4"
+            className="border-0 rounded outline-0 h-[60px] w-full bg-light-skyblue pl-4"
           />
         </div>
         <div className="mt-4">
           <textarea
-            name=""
-            id=""
+            name="message"
             cols={30}
             rows={10}
             placeholder="Message"
             className="border-0 rounded outline-0 h-[80px] w-full bg-[#f4f8fc] pl-4 pt-4"
-          ></textarea>
+          />
         </div>
         <div className="text-center mt-4">
           <button className="h-12 bg-light-purple text-lg text-white px-12 rounded-lg hover:bg-red-600 font-medium transition duration-300 ease-in-out">

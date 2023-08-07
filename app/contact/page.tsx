@@ -17,7 +17,7 @@ const Contact = () => {
       <div className="text-center py-16 text-3xl font-semibold">
         Get In Touch
       </div>
-      <div className="contact-form max-w-[1000px] mt-0 mb-8 mx-auto">
+      <div className="contact-form max-w-[1000px] mt-0 mb-8 mx-auto px-4 lg:px-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <input
             type="text"

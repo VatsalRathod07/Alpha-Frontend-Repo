@@ -31,6 +31,7 @@ const ProductDetails = () => {
   }, [selectedCategory]);
 
   const onHandleChange = (isChecked: boolean, id: number) => {
+    window.scrollTo({top: 0, behavior: "smooth"})
     if (isChecked) {
       setSelectedCatgory(null);
     } else {
@@ -39,32 +40,34 @@ const ProductDetails = () => {
   };
   return (
     <div className="flex w-full">
-      <div className="w-[25%] border-t-2 border-r-2 border-solid border-[#E4E7E7]">
-        <div className="mt-32 ml-[72px]">
-          <div className="font-medium text-xl text-manual-gray">
-            Filter By Categories
-          </div>
-          <div className="flex flex-col gap-2 mt-4">
-            {categories.map((data) => {
-              const isChecked = selectedCategory === data.id;
-              return (
-                <div className="flex items-center" key={data.id}>
-                  <input
-                    type="checkbox"
-                    checked={isChecked}
-                    className="h-5 w-5 cursor-pointer"
-                    onChange={() => onHandleChange(isChecked, data.id)}
-                  />
-                  <div className="text-start ml-4 font-medium text-lg">
-                    {data.name}
+      <section className="products py-10 sm:py-5 px-2 sm:px-5 bg-light flex gap-5 sm:flex-row flex-col">
+
+        <div className="w-full md:w-[30%] h-[300px] bg-white py-10  md:sticky md:top-4">
+          <div className="ml-[40px]">
+            <div className="font-medium text-xl text-manual-gray">
+              Filter By Categories
+            </div>
+            <div className="flex flex-col gap-2 mt-4">
+              {categories.map((data) => {
+                const isChecked = selectedCategory === data.id;
+                return (
+                  <div className="flex items-center" key={data.id}>
+                    <input
+                      type="checkbox"
+                      checked={isChecked}
+                      className="h-5 w-5 cursor-pointer"
+                      onChange={() => onHandleChange(isChecked, data.id)}
+                    />
+                    <div className="text-start ml-4 font-medium text-lg">
+                      {data.name}
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
-      </div>
-      <section className="w-[75%] products py-10 sm:py-5 px-2 sm:px-5 bg-light">
+
         <div className="container flex flex-col gap-[30px] py-5 px-8 bg-white">
           <div className="flex flex-col gap-3 sm:gap-0 sm:flex-row justify-between items-center">
             <h4 className="font-semibold text-lg text-primary">

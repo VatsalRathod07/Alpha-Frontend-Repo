@@ -12,7 +12,7 @@ const About = () => {
     Aos.init({ duration: 2000 });
   }, []);
   return (
-    <div className="flex w-full flex-col-reverse md:flex-row px-12 py-10 gap-10 max-w-[1440px]">
+    <div className="flex w-full flex-col-reverse md:flex-row px-5 sm:px-12 py-10 gap-10 max-w-[1440px]">
       <div
         className="left-side w-full md:w-[50%] bg-white shadow-2xl px-6 md:px-16 py-16 rounded-xl"
         data-aos="flip-right"

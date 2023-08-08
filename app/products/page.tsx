@@ -7,6 +7,7 @@ import { categories } from "@/database/updatedDB";
 import { useSearchParams } from "next/navigation";
 import { newProducts } from "../../database/updatedDB";
 import { FiFilter } from "react-icons/fi";
+import Image from "next/image";
 
 const ProductDetails = () => {
   const [selectedCategory, setSelectedCategory] = useState<any>(null);
@@ -40,7 +41,7 @@ const ProductDetails = () => {
       setSelectedCategory(id);
     }
     if (showFilterOptions) {
-      setShowFilterOptions(false)
+      setShowFilterOptions(false);
     }
   };
 
@@ -51,8 +52,6 @@ const ProductDetails = () => {
   return (
     <div className="flex w-full">
       <section className="products py-10 sm:py-5 px-2 sm:px-5 bg-light flex gap-5 sm:flex-row flex-col">
-
-
         {/* Sidebar with filter options */}
         <div className="w-full md:w-[30%] h-[300px] bg-white py-10 md:sticky md:top-4 hidden lg:block">
           <div className="ml-[40px]">
@@ -81,7 +80,6 @@ const ProductDetails = () => {
         </div>
 
         <div className="container flex flex-col gap-[30px] py-5 px-4 sm:px-8  bg-white relative">
-
           <div className="flex flex-col gap-3 sm:gap-0 sm:flex-row justify-between items-center">
             <h4 className="font-semibold text-lg text-primary">
               Our Latest Product
@@ -89,7 +87,6 @@ const ProductDetails = () => {
           </div>
           <div className="grid justify-items-center grid-cols-2 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-6 justify-center">
             {(filteredProducts || []).map((product: any) => {
-              console.log(product, "product");
               return (
                 <Link
                   href={`/products/${product.name}`}
@@ -98,8 +95,8 @@ const ProductDetails = () => {
                 >
                   <div className="product-card cursor-pointer hover:scale-105">
                     <div>
-                      <img
-                        src={product?.media[0]?.url?.src}
+                      <Image
+                        src={product?.media[0]?.url}
                         alt={product.name}
                         className="w-full "
                       />
@@ -133,7 +130,9 @@ const ProductDetails = () => {
                       type="checkbox"
                       checked={selectedCategory === data.id}
                       className="h-5 w-5 cursor-pointer"
-                      onChange={() => onHandleChange(selectedCategory === data.id, data.id)}
+                      onChange={() =>
+                        onHandleChange(selectedCategory === data.id, data.id)
+                      }
                     />
                     <div className="text-start ml-4 font-medium text-lg">
                       {data.name}
@@ -144,12 +143,12 @@ const ProductDetails = () => {
             </div>
           )}
 
-          {!showFilterOptions &&
+          {!showFilterOptions && (
             <div className="bg-white rounded-md border-[.5px_#e7e7e7] h-10 py-4 px-6 flex justify-center items-center lg:hidden right-0 fixed">
               <FiFilter size={30} onClick={toggleFilterOptions} />
               <span className="text-lg font-medium ">Filters</span>
             </div>
-          }
+          )}
         </div>
       </section>
     </div>

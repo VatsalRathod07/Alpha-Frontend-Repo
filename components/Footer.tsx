@@ -19,7 +19,7 @@ const Footer = () => {
 
             <div className="flex gap-2 text-white items-center">
               <FiMapPin size={30} className="text-white" />
-              <p>A-21, ABC avenue, near Bapa-sitaram chowk, Odhav, Ahmedabad 382350</p>
+              <p>721 Broadway, New York, NY 10003, USA</p>
             </div>
 
             <div className="flex gap-2 text-white items-center">

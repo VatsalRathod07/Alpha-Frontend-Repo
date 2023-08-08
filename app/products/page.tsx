@@ -143,9 +143,8 @@ const ProductDetails = () => {
           )}
 
           {!showFilterOptions && (
-            <div className="bg-white rounded-md border-[.5px_#e7e7e7] h-10 py-4 px-6 flex justify-center items-center lg:hidden right-2 bottom-64  fixed">
-              <FiFilter size={30} onClick={toggleFilterOptions} />
-              <span className="text-lg font-medium ">Filters</span>
+            <div className="bg-secondary rounded-full py-4 px-4 flex justify-center items-center lg:hidden left-[30px] top-[760px] fixed">
+              <FiFilter size={30} onClick={toggleFilterOptions} className="text-white"/>
             </div>
           )}
         </div>

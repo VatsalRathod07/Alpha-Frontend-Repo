@@ -15,7 +15,7 @@ const Home = () => {
           <img
             src="https://media.istockphoto.com/id/172401912/photo/grinding-wheat-into-flour.jpg?s=170667a&w=0&k=20&c=qVyvY5LV5KxfrRPW4TtFpW0vC3FJJjeZ1lHfJobr2fQ="
             alt="background_img"
-            className="home_background w-full h-[calc(100vh_-_84px)] object-cover bg-no-repeat"
+            className="home_background w-full h-[calc(100vh_-_400px)] md:h-[calc(100vh_-_600px)] lg:!h-[calc(100vh_-_84px)] object-cover bg-no-repeat"
           />
           <div className="home_overlay absolute inset-0 bg-gradient-to-b from-secondary opacity-40 to-black"></div>
           <div className="home_text absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center flex flex-col gap-5 items-center">

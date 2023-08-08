@@ -251,14 +251,23 @@ export const newProducts: Product[] = [
         type: "image",
         url: Image19,
       },
+      {
+        type: "image",
+        url: Image3,
+      },
+      {
+        type: "image",
+        url: Image11,
+      },
     ],
+
   },
   {
     id: 3003,
     type: ProductType.Aatamaker,
     categoryId: 2001,
     name: "Rose Gold and silver combinations",
-    rank: 2,
+    rank: 3,
     sellCount: 11,
     rating: 4.5,
     price: "11,500",
@@ -268,6 +277,14 @@ export const newProducts: Product[] = [
         type: "video",
         url: Image8,
       },
+      {
+        type: "image",
+        url: Image17,
+      },
+      {
+        type: "image",
+        url: Image5,
+      },
     ],
   },
   {
@@ -275,7 +292,7 @@ export const newProducts: Product[] = [
     type: ProductType.Aatamaker,
     categoryId: 2002,
     name: "Product 3003",
-    rank: 2,
+    rank: 4,
     sellCount: 11,
     price: "8,000",
     rating: 4.5,
@@ -285,6 +302,14 @@ export const newProducts: Product[] = [
         type: "image",
         url: Image9,
       },
+      {
+        type: "image",
+        url: Image12,
+      },
+      {
+        type: "image",
+        url: Image8,
+      },
     ],
   },
   {
@@ -292,7 +317,7 @@ export const newProducts: Product[] = [
     type: ProductType.Aatamaker,
     categoryId: 2002,
     name: "Product 3005",
-    rank: 3,
+    rank: 5,
     sellCount: 6,
     price: "14,500",
     rating: 5,
@@ -302,6 +327,14 @@ export const newProducts: Product[] = [
         type: "image",
         url: Image2,
       },
+      {
+        type: "image",
+        url: Image13,
+      },
+      {
+        type: "image",
+        url: Image1,
+      },
     ],
   },
   {
@@ -309,7 +342,7 @@ export const newProducts: Product[] = [
     type: ProductType.Aatamaker,
     categoryId: 2003,
     name: "Product 306",
-    rank: 3,
+    rank: 6,
     sellCount: 6,
     rating: 5,
     price: "9,500",
@@ -319,6 +352,14 @@ export const newProducts: Product[] = [
         type: "image",
         url: Image11,
       },
+      {
+        type: "image",
+        url: Image10,
+      },
+      {
+        type: "image",
+        url: Image19,
+      },
     ],
   },
   {
@@ -327,7 +368,7 @@ export const newProducts: Product[] = [
     categoryId: 2003,
     name: "Product 3007",
     rank: 3,
-    sellCount: 6,
+    sellCount: 7,
     price: "10,000",
     rating: 3.2,
     companyId: 1001,
@@ -335,6 +376,14 @@ export const newProducts: Product[] = [
       {
         type: "image",
         url: Image14,
+      },
+      {
+        type: "image",
+        url: Image18,
+      },
+      {
+        type: "image",
+        url: Image16,
       },
     ],
   },
@@ -344,7 +393,7 @@ export const newProducts: Product[] = [
     categoryId: 2004,
     name: "Product 3008",
     rank: 3,
-    sellCount: 6,
+    sellCount: 8,
     price: "10,000",
     rating: 3.2,
     companyId: 1001,
@@ -353,6 +402,14 @@ export const newProducts: Product[] = [
         type: "image",
         url: Image3,
       },
+      {
+        type: "image",
+        url: Image6,
+      },
+      {
+        type: "image",
+        url: Image15,
+      },
     ],
   },
   {
@@ -360,7 +417,7 @@ export const newProducts: Product[] = [
     type: ProductType.Aatamaker,
     categoryId: 2004,
     name: "Product 3009",
-    rank: 3,
+    rank: 9,
     sellCount: 6,
     price: "10,000",
     rating: 3.2,
@@ -370,6 +427,14 @@ export const newProducts: Product[] = [
         type: "image",
         url: Image4,
       },
+      {
+        type: "image",
+        url: Image10,
+      },
+      {
+        type: "image",
+        url: Image17,
+      },
     ],
   },
   {
@@ -377,7 +442,7 @@ export const newProducts: Product[] = [
     type: ProductType.Aatamaker,
     categoryId: 2004,
     name: "Product 3010",
-    rank: 3,
+    rank: 10,
     sellCount: 6,
     price: "10,000",
     rating: 3.2,
@@ -387,6 +452,14 @@ export const newProducts: Product[] = [
         type: "image",
         url: Image5,
       },
+      {
+        type: "image",
+        url: Image9,
+      },
+      {
+        type: "image",
+        url: Image16,
+      },
     ],
   },
   {
@@ -394,7 +467,7 @@ export const newProducts: Product[] = [
     type: ProductType.Aatamaker,
     categoryId: 2005,
     name: "Product 3011",
-    rank: 3,
+    rank: 11,
     sellCount: 6,
     price: "10,000",
     rating: 3.2,
@@ -404,6 +477,14 @@ export const newProducts: Product[] = [
         type: "image",
         url: Image6,
       },
+      {
+        type: "image",
+        url: Image11,
+      },
+      {
+        type: "image",
+        url: Image7,
+      },
     ],
   },
   {
@@ -411,7 +492,7 @@ export const newProducts: Product[] = [
     type: ProductType.Aatamaker,
     categoryId: 2005,
     name: "Product 3012",
-    rank: 3,
+    rank: 12,
     sellCount: 6,
     price: "10,000",
     rating: 3.2,
@@ -420,6 +501,14 @@ export const newProducts: Product[] = [
       {
         type: "image",
         url: Image7,
+      },
+      {
+        type: "image",
+        url: Image19,
+      },
+      {
+        type: "image",
+        url: Image13,
       },
     ],
   },

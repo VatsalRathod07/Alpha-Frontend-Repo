@@ -9,11 +9,11 @@ interface categories {
 const PricingCard = ({ name, price, features, onClick }: categories) => {
   return (
     <div
-      className="flex items-center  cursor-pointer hover:-translate-y-1 hover:scale-105 transition duration-300 transform py-5"
+      className="flex items-center cursor-pointer hover:-translate-y-1 hover:scale-105 transition duration-300 transform py-5"
       onClick={onClick}
     >
       <div
-        className=" shadow-2xl min-w-[350px] transition duration-300 ease-in-out rounded-lg hover:shadow-3xl p-6 w-full sm:w-[300px]"
+        className=" shadow-2xl bg-white bg-opacity-80 min-w-[300px] md:min-w-[350px] transition duration-300 ease-in-out rounded-lg hover:shadow-3xl p-6 w-full sm:w-[300px]"
         style={{
           background: "1 !important",
           backgroundColor: "white !important",

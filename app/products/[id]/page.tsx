@@ -1,19 +1,18 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
-import { AiOutlineStar } from "react-icons/ai";
+import React, { useState } from "react";
 
-import ImageViewer from '@/components/ImageViewer';
+import ImageViewer from "@/components/ImageViewer";
 import MainProduct from "@/components/main-product";
-
-
-
+import { useParams } from "next/navigation";
 
 const ProductDetails = () => {
+  const { id } = useParams();
   const [isImageViewerOpen, setIsImageViewerOpen] = useState(false);
-  
-  return (
-   isImageViewerOpen ? <ImageViewer onClose={() => setIsImageViewerOpen(false)} /> : <MainProduct setIsImageViewerOpen = {setIsImageViewerOpen} />
+
+  return isImageViewerOpen ? (
+    <ImageViewer onClose={() => setIsImageViewerOpen(false)} />
+  ) : (
+    <MainProduct setIsImageViewerOpen={setIsImageViewerOpen} />
   );
 };
 

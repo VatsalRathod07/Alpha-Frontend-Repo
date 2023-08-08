@@ -31,7 +31,7 @@ const Navbar = () => {
       setIsNavbarScroll(true);
       isScrollingTimer = setTimeout(() => {
         setIsNavbarScroll(false);
-      }, 300);
+      }, 700);
     };
 
     window.addEventListener("scroll", handleScroll);

@@ -52,7 +52,6 @@ const ProductDetails = () => {
   return (
     <div className="flex w-full">
       <section className="products py-10 sm:py-5 px-2 sm:px-5 bg-light flex gap-5 sm:flex-row flex-col">
-        {/* Sidebar with filter options */}
         <div className="w-full md:w-[30%] h-[300px] bg-white py-10 md:sticky md:top-4 hidden lg:block">
           <div className="ml-[40px]">
             <div className="font-medium text-xl text-manual-gray">
@@ -89,11 +88,11 @@ const ProductDetails = () => {
             {(filteredProducts || []).map((product: any) => {
               return (
                 <Link
-                  href={`/products/${product.name}`}
+                  href={`/products/${product.id}`}
                   key={product.id}
                   className="product-link"
                 >
-                  <div className="product-card cursor-pointer hover:scale-105">
+                  <div className="product-card cursor-pointer hover:scale-105 transition duration-300 hover:rounded-md hover:shadow-md">
                     <div>
                       <Image
                         src={product?.media[0]?.url}
@@ -122,7 +121,7 @@ const ProductDetails = () => {
           </div>
 
           {showFilterOptions && (
-            <div className="rounded-md border-[.5px_whitesmoke] h-10 py-4 px-6 flex justify-center items-center lg:hidden right-0 fixed">
+            <div className="rounded-md border-[.5px_whitesmoke] h-10 py-4 px-6 flex justify-center items-center lg:hidden right-2 bottom-52 fixed">
               <div className="flex bg-white flex-col gap-2 mt-44 h-[calc(100vh - 500px)] px-10 py-10 rounded-md">
                 {categories.map((data) => (
                   <div className="flex items-center" key={data.id}>
@@ -144,7 +143,7 @@ const ProductDetails = () => {
           )}
 
           {!showFilterOptions && (
-            <div className="bg-white rounded-md border-[.5px_#e7e7e7] h-10 py-4 px-6 flex justify-center items-center lg:hidden right-0 fixed">
+            <div className="bg-white rounded-md border-[.5px_#e7e7e7] h-10 py-4 px-6 flex justify-center items-center lg:hidden right-2 bottom-64  fixed">
               <FiFilter size={30} onClick={toggleFilterOptions} />
               <span className="text-lg font-medium ">Filters</span>
             </div>

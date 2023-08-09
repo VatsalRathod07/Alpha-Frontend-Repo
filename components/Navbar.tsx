@@ -148,12 +148,20 @@ const Navbar = () => {
         </li>
         <div className="flex flex-col justify-center gap-5">
           <li>
-            <Link href="/" className="text-base font-normal text-black ">
+            <Link
+              href="/"
+              className="text-base font-normal text-black"
+              onClick={closeSidebar}
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link href="/products" className="text-base font-normal text-black">
+            <Link
+              href="/products"
+              className="text-base font-normal text-black"
+              onClick={closeSidebar}
+            >
               Products
             </Link>
           </li>
@@ -163,7 +171,11 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="text-base font-normal text-black">
+            <Link
+              href="/contact"
+              className="text-base font-normal text-black"
+              onClick={closeSidebar}
+            >
               Contact
             </Link>
           </li>

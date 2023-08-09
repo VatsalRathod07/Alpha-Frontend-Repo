@@ -13,7 +13,7 @@ const ProductDetails = () => {
   const [isImageViewerOpen, setIsImageViewerOpen] = useState(false);
 
   return isImageViewerOpen ? (
-    <ImageViewer onClose={() => setIsImageViewerOpen(false)} />
+    <ImageViewer onClose={() => setIsImageViewerOpen(false)} product={productById} />
   ) : (
     <MainProduct
       setIsImageViewerOpen={setIsImageViewerOpen}

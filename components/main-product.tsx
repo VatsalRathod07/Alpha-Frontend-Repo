@@ -55,7 +55,7 @@ const MainProduct = ({ setIsImageViewerOpen, product, id }: any) => {
     dots: true,
   };
 
-  const getCategory = categories.find((data) => data.id === product.categoryId);
+  const getCategory = categories.find((data) => data.id === product?.categoryId);
 
   return (
     <section className="products_detail pt-5 sm:pt-10 pb-5z sm:pb-12 px-2 sm:px-5 bg-light">
@@ -182,7 +182,7 @@ const MainProduct = ({ setIsImageViewerOpen, product, id }: any) => {
           <div className="products-grid grid justify-items-center grid-cols-2 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 sm gap-5 justify-center">
             {memoizedProducts.map((product) => (
               <Link
-                href={`/products/${product.name}`}
+                href={`/products/${product.id}`}
                 key={product.name}
                 className="product-link"
               >

@@ -68,10 +68,10 @@ const Footer = () => {
       <div className="flex justify-around">
         <p className="text-white pt-4">©2023 Alpha Shop. All Rights Reserved</p>
 
-        <p className="text-white">
+        <div className="text-white">
           <p className="text-center">Made with ❤ by</p>
           Jay Bhingradiya ,Vatsal Rathdod & Darshan Vaghela
-        </p>
+        </div>
       </div>
     </footer>
   );

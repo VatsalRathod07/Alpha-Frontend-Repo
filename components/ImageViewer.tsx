@@ -1,7 +1,9 @@
+import Image from "next/image";
 import React from "react";
 import { IoIosCloseCircleOutline } from "react-icons/io"
 
-const ImageViewer = ({ onClose }: any) => {
+const ImageViewer = ({ onClose , product}: any) => {
+
     const productsImages = [
         {
             id: 1,
@@ -20,10 +22,10 @@ const ImageViewer = ({ onClose }: any) => {
         <div className="relative pl-40 py-14">
             <IoIosCloseCircleOutline className="absolute right-10 cursor-pointer" onClick={onClose} size={30}/>
             <div className="flex flex-col gap-4 ">
-                {productsImages.map((data) => {
+                {product?.media?.map((data :{url:any}, index:number) => {
                     return (
-                        <div key={data.id}>
-                            <img src={data.image} alt="Product Image" className="" />
+                        <div key={index}>
+                            <Image src={data?.url} alt="Product Image" className="" />
                         </div>
                     )
                 })} 

@@ -8,6 +8,7 @@ import { useSearchParams } from "next/navigation";
 import { newProducts } from "../../database/updatedDB";
 import { FiFilter } from "react-icons/fi";
 import Image from "next/image";
+import { GrFormClose } from "react-icons/gr";
 
 const ProductDetails = () => {
   const [selectedCategory, setSelectedCategory] = useState<any>(null);
@@ -121,8 +122,13 @@ const ProductDetails = () => {
           </div>
 
           {showFilterOptions && (
-            <div className="rounded-md border-[.5px_whitesmoke] h-10 py-4 px-6 flex justify-center items-center lg:hidden right-2 bottom-52 fixed">
-              <div className="flex bg-white flex-col gap-2 mt-44 h-[calc(100vh - 500px)] px-10 py-10 rounded-md">
+            <div className="rounded-md border-[.5px_whitesmoke] py-4 flex justify-center items-center lg:hidden left-2 bottom-4 fixed">
+              <GrFormClose
+                className="absolute top-5 right-4 rounded-[50%] p-1 border border-pale cursor-pointer border-solid transition duration-300 ease-in-out"
+                size={30}
+                onClick={() => setShowFilterOptions(false)}
+              />
+              <div className="flex bg-white flex-col gap-2 px-10 py-10 rounded-md">
                 {categories.map((data) => (
                   <div className="flex items-center" key={data.id}>
                     <input
@@ -143,7 +149,7 @@ const ProductDetails = () => {
           )}
 
           {!showFilterOptions && (
-            <div className="bg-secondary rounded-full py-4 px-4 flex justify-center items-center lg:hidden left-[30px] bottom-[90px] fixed">
+            <div className="bg-secondary rounded-full py-4 px-4 flex justify-center items-center bottom-32 lg:hidden left-[30px] fixed">
               <FiFilter
                 size={30}
                 onClick={toggleFilterOptions}

@@ -21,25 +21,25 @@ const Navbar = () => {
     setIsSidebarOpen(false);
   };
 
-  useEffect(() => {
-    let isScrollingTimer: any;
+  // useEffect(() => {
+  //   let isScrollingTimer: any;
 
-    const handleScroll = () => {
-      if (isScrollingTimer) {
-        clearTimeout(isScrollingTimer);
-      }
-      setIsNavbarScroll(true);
-      isScrollingTimer = setTimeout(() => {
-        setIsNavbarScroll(false);
-      }, 700);
-    };
+  //   const handleScroll = () => {
+  //     if (isScrollingTimer) {
+  //       clearTimeout(isScrollingTimer);
+  //     }
+  //     setIsNavbarScroll(true);
+  //     isScrollingTimer = setTimeout(() => {
+  //       setIsNavbarScroll(false);
+  //     }, 700);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   const linkStyle =
     "text-base font-medium text-secondary hover:text-light-purple hover:font-semibold";
@@ -166,7 +166,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/about" className="text-base font-normal text-black">
+            <Link href="/about" className="text-base font-normal text-black" onClick={closeSidebar}>
               About
             </Link>
           </li>

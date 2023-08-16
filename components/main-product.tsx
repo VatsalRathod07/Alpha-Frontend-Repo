@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useEffect, useMemo, useState } from "react";
-import { AiOutlineStar } from "react-icons/ai";
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -10,18 +10,29 @@ import { newProducts, categories } from "../database/updatedDB";
 const MainProduct = ({ setIsImageViewerOpen, product, id }: any) => {
   const memoizedProducts = useMemo(() => {
     const getTopThreeProducts = newProducts.slice(0, 3);
-    const isCurentProductAvailable = getTopThreeProducts.find(
+    const isCurrentProductAvailable = getTopThreeProducts.find(
       (data) => data.id.toString() === id
     );
-    if (!!isCurentProductAvailable) {
+
+    let productsWithPrice = getTopThreeProducts.map(data => ({
+      ...data,
+      price: categories.find(category => Number(category.id) === data.categoryId)?.price.value
+    }));
+
+    if (!!isCurrentProductAvailable) {
       const newTopThreeProducts = newProducts
         .slice(0, 4)
-        .filter((data) => data.id.toString() !== id);
-      return newTopThreeProducts;
-    } else {
-      return getTopThreeProducts;
+        .filter(data => data.id.toString() !== id);
+
+      productsWithPrice = newTopThreeProducts.map(data => ({
+        ...data,
+        price: categories.find(category => Number(category.id) === data.categoryId)?.price.value
+      }));
     }
-  }, [id]);
+
+    return productsWithPrice;
+  }, [id, newProducts, categories]);
+
 
   const [mainImage, setMainImage] = useState(product?.media[0]?.url);
 
@@ -55,7 +66,7 @@ const MainProduct = ({ setIsImageViewerOpen, product, id }: any) => {
     dots: true,
   };
 
-  const getCategory = categories.find((data) => data.id === product?.categoryId);
+  const getCategory:any = categories.find((data) => data.id === product?.categoryId);
 
   return (
     <section className="products_detail pt-5 sm:pt-10 pb-5z sm:pb-12 px-2 sm:px-5 bg-light">
@@ -103,9 +114,9 @@ const MainProduct = ({ setIsImageViewerOpen, product, id }: any) => {
                 {product.name}
               </p>
               <h4 className="text-xl font-semibold text-primary">
-                ₹ {product.price}
+                ₹ {getCategory.price.value}
               </h4>
-              {getCategory?.features.map((feature, index) => {
+              {getCategory?.features.map((feature:any, index:number) => {
                 return (
                   <>
                     <li
@@ -127,7 +138,7 @@ const MainProduct = ({ setIsImageViewerOpen, product, id }: any) => {
 
             <div className="flex flex-col gap-7 mt-5">
               <p className="text-xl sm:text-3xl text-secondary font-signature">
-                {product.name}.
+                {product.name}
               </p>
               <div className="font-signature text-primary">
                 <p>
@@ -154,7 +165,7 @@ const MainProduct = ({ setIsImageViewerOpen, product, id }: any) => {
                 </p>
 
                 <div className="flex flex-col gap-3">
-                  {getCategory?.features.map((feature, index) => {
+                  {getCategory?.features.map((feature:any, index:number) => {
                     return (
                       <>
                         <li
@@ -183,30 +194,33 @@ const MainProduct = ({ setIsImageViewerOpen, product, id }: any) => {
             {memoizedProducts.map((product) => (
               <Link
                 href={`/products/${product.id}`}
-                key={product.name}
+                key={product.id}
                 className="product-link"
               >
                 <div className="product-card cursor-pointer">
                   <div>
                     <Image
-                      src={product?.media[0]?.url as any}
+                      src={product?.media[0]?.url}
                       alt={product.name}
-                      className="product-img w-full object-cover"
+                      className="w-full "
                     />
                   </div>
-                  <div className="product-details py-1 flex flex-col gap-[2px]">
-                    <div className="flex gap-[1px] text-primary text-sm">
-                      <AiOutlineStar />
-                      <AiOutlineStar />
-                      <AiOutlineStar />
-                      <AiOutlineStar />
-                    </div>
+                  <div className="product-details py-1 flex flex-col gap-[2px] p-2">
                     <p className="product-name font-signature text-secondary font-normal text-base">
                       {product.name}
                     </p>
-                    <p className="product-price text-sm text-primary font-bold">
-                      {product.price}
+                    <p className="product-name font-signature text-neutral-600 font-normal text-base">
+                      {product.category}
                     </p>
+                    <div className="flex justify-between items-center gap-[1px] text-primary text-sm mt-2">
+                      <p className="product-price text-sm text-primary font-bold">
+                        ₹ {product.price}
+                      </p>
+                      <div className="flex items-center gap-1">
+                        <AiFillStar className="text-yellow-300" />
+                        <p>4.5</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </Link>

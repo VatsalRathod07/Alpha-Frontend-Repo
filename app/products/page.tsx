@@ -24,13 +24,21 @@ const ProductDetails = () => {
   }, [category]);
 
   const filteredProducts = useMemo(() => {
+    const productsWithPricing = newProducts.map((data) => {
+      const categoryPrice = categories.find((category) => Number(category.id) === data.categoryId)
+      return{
+        ...data,
+        price: categoryPrice?.price.value
+      }
+    })
+      // console.log(productsWithPricing,"productsWithPricing")
     if (!!selectedCategory) {
-      const data = newProducts.filter(
+      const data = productsWithPricing.filter(
         (data) => data.categoryId === Number(selectedCategory)
       );
       return data;
     } else {
-      return newProducts;
+      return productsWithPricing;
     }
   }, [selectedCategory]);
 
@@ -93,7 +101,7 @@ const ProductDetails = () => {
                   key={product.id}
                   className="product-link"
                 >
-                  <div className="product-card cursor-pointer hover:scale-105 transition duration-300 hover:rounded-md hover:shadow-md">
+                  <div className="product-card cursor-pointer">
                     <div>
                       <Image
                         src={product?.media[0]?.url}
@@ -102,8 +110,11 @@ const ProductDetails = () => {
                       />
                     </div>
                     <div className="product-details py-1 flex flex-col gap-[2px] p-2">
-                      <p className="product-name font-signature text-secondary font-normal text-base min-h-[50px]">
+                      <p className="product-name font-signature text-secondary font-normal text-base">
                         {product.name}
+                      </p>
+                      <p className="product-name font-signature text-neutral-600 font-normal text-base">
+                        {product.category}
                       </p>
                       <div className="flex justify-between items-center gap-[1px] text-primary text-sm mt-2">
                         <p className="product-price text-sm text-primary font-bold">

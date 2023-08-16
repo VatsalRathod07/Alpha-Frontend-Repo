@@ -6,8 +6,6 @@ import {
   BsInstagram,
   BsTwitter,
 } from "react-icons/bs";
-import { BiPhoneCall, BiLogoGmail } from "react-icons/bi";
-import { FiMapPin } from "react-icons/fi";
 
 const Footer = () => {
   return (
@@ -30,21 +28,6 @@ const Footer = () => {
           <div className="flex flex-col gap-6">
             <h1 className="text-2xl font-bold text-white">Get in Touch</h1>
 
-            {/* <div className="flex gap-2 text-white items-center">
-              <FiMapPin size={30} className="text-white" />
-              <p>721 Broadway, New York, NY 10003, USA</p>
-            </div>
-
-            <div className="flex gap-2 text-white items-center">
-              <BiPhoneCall size={25} className="text-white" />
-              <p>1234567890</p>
-            </div>
-
-            <div className="flex gap-2 text-white items-center">
-              <BiLogoGmail size={25} className="text-white" />
-              <p>alpha@gamil.com</p>
-            </div> */}
-
             <div className="flex gap-5">
               <BsInstagram
                 size={30}
@@ -65,11 +48,11 @@ const Footer = () => {
 
       <span className="border-pale border-t-[.1px] opacity-25"></span>
 
-      <div className="flex justify-around">
+      <div className="flex flex-col sm:flex-row justify-around gap-5">
         <p className="text-white pt-4">©2023 Alpha Shop. All Rights Reserved</p>
 
         <div className="text-white">
-          <p className="text-center">Made with ❤ by</p>
+          <p className="text-strat sm:text-center">Made with ❤ by</p>
           Jay Bhingradiya ,Vatsal Rathdod & Darshan Vaghela
         </div>
       </div>

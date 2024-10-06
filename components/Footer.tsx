@@ -53,7 +53,7 @@ const Footer = () => {
 
         <div className="text-white">
           <p className="text-strat sm:text-center">Made with ❤ by</p>
-          Jay Bhingradiya ,Vatsal Rathdod & Darshan Vaghela
+          Jay Bhingradiya ,Vatsal Rathod & Darshan Vaghela
         </div>
       </div>
     </footer>
